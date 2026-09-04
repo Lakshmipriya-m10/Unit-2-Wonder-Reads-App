@@ -5,7 +5,7 @@ const readingLevels = [
     title: "Reading Level 1",
     lexile: "BR-200L",
     grade: "1",
-    link: "/AllStories",
+    link: "/Grade1Reading",
   },
   {
     image:
@@ -13,7 +13,7 @@ const readingLevels = [
     title: "Reading Level 2",
     lexile: "200L-400L",
     grade: "2",
-    link: "/AllStories",
+    link: "/Grade2Reading",
   },
   {
     image:
@@ -21,7 +21,7 @@ const readingLevels = [
     title: "Reading Level 3",
     lexile: "400L-600L",
     grade: "3",
-    link: "/AllStories",
+    link: "/Grade3Reading",
   },
   {
     image:
@@ -29,7 +29,7 @@ const readingLevels = [
     title: "Reading Level 4",
     lexile: "600L-700L",
     grade: "4",
-    link: "/AllStories",
+    link: "/Grade4Reading",
   },
   {
     image:
@@ -37,8 +37,15 @@ const readingLevels = [
     title: "Reading Level 5",
     lexile: "700L-800L",
     grade: "5",
-    link: "/AllStories",
+    link: "/Grade5Reading",
   },
+  {
+  image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1788540845/istockphoto-2246082356-612x612_enujcq.jpg",
+  title: "Kids OwnStory",
+  lexile: "-",
+  grade: "All",
+  link: "/OwnStories",
+}, 
 ];
 
 export default readingLevels;

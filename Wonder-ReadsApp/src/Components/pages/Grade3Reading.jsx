@@ -1,0 +1,12 @@
+import React from 'react'
+
+const Grade3Reading = () => {
+  return (
+    <div>
+       <h1>Grade 1 Reading</h1>
+          <p>Welcome to Grade 1 reading!</p>
+    </div>
+  )
+}
+
+export default Grade3Reading
