@@ -11,7 +11,7 @@ import StoryForm from "./Components/pages/StoryForm.jsx";
 import MiniGames from "./Components/pages/MiniGames.jsx";
 import ReadingCards from './Components/pages/ReadingCard.jsx';
 import AllStories from './Components/pages/AllStories.jsx';
-import Stories from './Components/pages/Stories.jsx'
+
 import Quiz from './Components/pages/Quiz.jsx';
 import MemoryFlip from './Components/pages/MemoryFlip.jsx';
 import ButterflyGame from './Components/pages/ButterflyGame.jsx';
@@ -37,7 +37,7 @@ function App() {
           <Route path="/StoryForm" element={<StoryForm />} />
           <Route path="/MiniGames" element={<MiniGames />} />
           <Route path="/AllStories" element={<AllStories />} />
-          <Route path="/Stories" element={<Stories />} />
+        
           <Route path="/MemoryFlip" element={<MemoryFlip />} />
           <Route path="/ButterflyGame" element={<ButterflyGame />} />
           <Route path="/FruitSlice" element={<FruitSlice />} />
