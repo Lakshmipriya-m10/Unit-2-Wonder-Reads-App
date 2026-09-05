@@ -1,13 +1,24 @@
 import Reading from "../pages/Reading.jsx";
-import React from 'react';
-import readingLevels from "../data/readingData.js";
+import React, { useEffect, useState } from "react";
 
 const ReadingCards = () => {
+  const [readingLevels, setReadingLevels] = useState([]);
+   useEffect(() => {
+    fetch("http://localhost:8080/api/readinglevels")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Reading levels:", data);
+        setReadingLevels(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching reading levels:", error);
+      });
+  }, []);
   return (
     <div className="reading-container">
-      {readingLevels.map((item, index) => (
+      {readingLevels.map((item) => (
         <Reading
-          key={index}
+          key={item.id}
           image={item.image}
           title={item.title}
           lexile={item.lexile}
