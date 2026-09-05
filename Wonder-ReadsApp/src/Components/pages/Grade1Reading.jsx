@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -25,9 +24,7 @@ const Grade1Reading = () => {
         const grade1Stories = data.filter(
           (story) => String(story.Grade) === "1"
         );
-
         console.log("Grade 1 stories:", grade1Stories);
-
         setStories(grade1Stories);
         setLoading(false);
       })
@@ -56,7 +53,6 @@ const Grade1Reading = () => {
     speech.rate = 0.5;
     speech.pitch = 1;
     speech.lang = "en-US";
-
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(speech);
   };
@@ -106,9 +102,7 @@ const Grade1Reading = () => {
   }
 
   return (
-
     <div
-        
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
@@ -117,102 +111,114 @@ const Grade1Reading = () => {
         minHeight: "100vh",
         padding: "30px",
       }}
-   
     >
-           <h2>Grade 1 - Reading</h2>
-      {stories.map((story) => {
-  const images = getImages(story);
-
-  return (
-    <div
-      key={story.id}
-      style={{
-        maxWidth: "1000px",
-        margin: "30px auto",
-        background: "white",
-        borderRadius: "20px",
-        padding: "25px",
-        boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-        display: "flex",
-        gap: "30px",
-        alignItems: "center",
-      }}
-    
-    >
-       
-      {/* LEFT - IMAGE */}
-      <div
-        style={{
-          width: "45%",
-          flexShrink: 0,
-        }}
-      >
-        <Swiper
-          modules={[Navigation, Pagination]}
-          pagination={{ clickable: true }}
-          navigation
-          slidesPerView={1}
-        >
-          {images.map((img, index) => (
-            <SwiperSlide key={index}>
-              <img
-                src={img}
-                alt={`${story.title} ${index + 1}`}
-                style={{
-                  width: "100%",
-                  height: "300px",
-                  objectFit: "contain",
-                  borderRadius: "15px",
-                }}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* RIGHT - STORY INFORMATION */}
-      <div
-        style={{
-          flex: 1,
-          textAlign: "left",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "28px",
-            marginBottom: "10px",
-          }}
-        >
-          {story.title}
-        </h2>
-
-    
-        <p
-          style={{
-            fontSize: "18px",
-            lineHeight: "1.6",
-            color: "#333",
-          }}
-        >
-          {story.Text}
-        </p>
-
-        {/* READ BUTTON */}
+      <h2>Grade 1 - Reading</h2>
+      <Link to="/reading">
         <button
-          className="button"
-          onClick={() => readStory(story)}
           style={{
-            marginTop: "15px",
-            padding: "12px 25px",
-            borderRadius: "10px",
+            padding: "10px 20px",
+            marginBottom: "20px",
+            borderRadius: "8px",
             border: "none",
             cursor: "pointer",
-            fontSize: "16px",
+            fontSize: "18px",
+            color: "black"
           }}
         >
-          🔊 Read Story
+          ← Back to Reading
         </button>
-    
+      </Link>
+      {stories.map((story) => {
+        const images = getImages(story);
+
+        return (
+          <div
+            key={story.id}
+            style={{
+              maxWidth: "1000px",
+              margin: "30px auto",
+              background: "white",
+              borderRadius: "20px",
+              padding: "25px",
+              boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+              display: "flex",
+              gap: "30px",
+              alignItems: "center",
+            }}
+          >
+            {/* LEFT - IMAGE */}
+            <div
+              style={{
+                width: "45%",
+                flexShrink: 0,
+              }}
+            >
+              <Swiper
+                modules={[Navigation, Pagination]}
+                pagination={{ clickable: true }}
+                navigation
+                slidesPerView={1}
+              >
+                {images.map((img, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={img}
+                      alt={`${story.title} ${index + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "300px",
+                        objectFit: "contain",
+                        borderRadius: "15px",
+                      }}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* RIGHT - STORY INFORMATION */}
+            <div
+              style={{
+                flex: 1,
+                textAlign: "left",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "28px",
+                  marginBottom: "10px",
+                }}
+              >
+                {story.title}
+              </h2>
+
+
+              <p
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "1.6",
+                  color: "#333",
+                }}
+              >
+                {story.Text}
+              </p>
+
+              {/* READ BUTTON */}
+              <button
+                className="button"
+                onClick={() => readStory(story)}
+                style={{
+                  marginTop: "15px",
+                  padding: "12px 25px",
+                  borderRadius: "10px",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "16px",
+                }}
+              >
+                🔊 Read Story
+              </button>
+
               <button
                 className="button"
                 onClick={stopReading}
@@ -234,7 +240,6 @@ const Grade1Reading = () => {
                 Resume
               </button>
             </div>
-
           </div>
         );
       })}
