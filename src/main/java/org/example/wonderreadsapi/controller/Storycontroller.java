@@ -36,7 +36,6 @@ public class Storycontroller {
         existingStory.setGrade(story.getGrade());
         existingStory.setText(story.getText());
         existingStory.setImage(story.getImage());
-        existingStory.setLexile(story.getLexile());
 
         return storyRepository.save(existingStory);
     }

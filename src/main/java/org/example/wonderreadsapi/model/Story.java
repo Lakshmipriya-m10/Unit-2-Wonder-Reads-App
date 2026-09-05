@@ -15,7 +15,7 @@ public class Story {
     @Column(columnDefinition = "TEXT")
     private String Text;
     private String image;
-    private String Lexile;
+
 
     public Story(){
 
@@ -61,11 +61,5 @@ public class Story {
         this.image = image;
     }
 
-    public String getLexile() {
-        return Lexile;
-    }
 
-    public void setLexile(String lexile) {
-        Lexile = lexile;
-    }
 }
