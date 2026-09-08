@@ -33,6 +33,7 @@ const Grade1Reading = () => {
         setLoading(false);
       });
   }, []);
+  
 
   // Stop speech when leaving the page
   useEffect(() => {
