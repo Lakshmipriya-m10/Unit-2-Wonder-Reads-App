@@ -1,6 +1,7 @@
 package org.example.wonderreadsapi.controller;
 import org.example.wonderreadsapi.model.QuizQus;
 import org.example.wonderreadsapi.repository.QuizQusRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,13 +11,10 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:5173")
 public class QuizQusController {
 
-    private final QuizQusRepository quizQusRepository;
+    @Autowired
+    private QuizQusRepository quizQusRepository;
 
-    public QuizQusController(QuizQusRepository quizQusRepository) {
-        this.quizQusRepository = quizQusRepository;
-    }
-
-    @GetMapping
+@GetMapping
     public List<QuizQus> getAllQuiz() {
         return quizQusRepository.findAll();
     }
