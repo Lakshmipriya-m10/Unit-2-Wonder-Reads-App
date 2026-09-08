@@ -1,24 +1,34 @@
 package org.example.wonderreadsapi.model;
 
-
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-@Table(name="stories")
+@Table(name = "stories")
 public class Story {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
+
     private String Grade;
+
     @Column(columnDefinition = "TEXT")
     private String Text;
+
     private String image;
 
+    @OneToMany(
+            mappedBy = "story",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER
+    )
+    private List<QuizQus> questions;
 
-    public Story(){
-
+    public Story() {
     }
 
     public Long getId() {
@@ -61,5 +71,11 @@ public class Story {
         this.image = image;
     }
 
+    public List<QuizQus> getQuestions() {
+        return questions;
+    }
 
+    public void setQuestions(List<QuizQus> questions) {
+        this.questions = questions;
+    }
 }
