@@ -22,6 +22,17 @@ public class OwnStoryController {
     @Autowired
     private StudentRepository studentRepository;
 
+    @PutMapping("/{id}")
+    public OwnStory updateStory(@PathVariable Long id, @RequestBody OwnStoryDto request) {
+
+        OwnStory ownStory = ownStoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Story not found"));
+
+        ownStory.setStory(request.getStory());
+
+        return ownStoryRepository.save(ownStory);
+    }
+
     @PostMapping
     public OwnStory createStory(@RequestBody OwnStoryDto request) {
 
@@ -48,10 +59,12 @@ public class OwnStoryController {
 
     @GetMapping
     public List<OwnStory> getAllStories(){
+
         return ownStoryRepository.findAll();
     }
     @GetMapping("/{id}")
     public OwnStory getStoryById(@PathVariable Long id){
+
         return ownStoryRepository.findById(id).orElseThrow(null);
     }
 
