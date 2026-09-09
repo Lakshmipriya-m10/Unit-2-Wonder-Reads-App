@@ -1,5 +1,6 @@
 package org.example.wonderreadsapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
@@ -16,7 +17,7 @@ public class Student {
     private String contactNo;
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
-
+    @JsonBackReference //// Prevents infinite recursion
     private List<OwnStory> ownStories;
 
     public Student(){
