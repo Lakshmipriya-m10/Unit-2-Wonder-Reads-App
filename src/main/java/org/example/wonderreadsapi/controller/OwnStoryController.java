@@ -1,6 +1,7 @@
 package org.example.wonderreadsapi.controller;
 
 
+import org.example.wonderreadsapi.dto.OwnStoryDto;
 import org.example.wonderreadsapi.model.OwnStory;
 import org.example.wonderreadsapi.model.Student;
 import org.example.wonderreadsapi.repository.OwnStoryRepository;
@@ -22,14 +23,29 @@ public class OwnStoryController {
     private StudentRepository studentRepository;
 
     @PostMapping
-    public OwnStory createStory(@RequestBody OwnStory ownStory) {
-        Student student = ownStory.getStudent();
+    public OwnStory createStory(@RequestBody OwnStoryDto request) {
 
-        Student savedStudent = studentRepository.save(student);
+        Student student = studentRepository
+                .findByEmail(request.getEmail())
+                .orElseGet(() -> {
+                    Student newStudent = new Student();
 
-        ownStory.setStudent(savedStudent);
+                    newStudent.setName(request.getName());
+                    newStudent.setEmail(request.getEmail());
+                    newStudent.setContactNo(request.getContactNo());
+
+                    return studentRepository.save(newStudent);
+                });
+
+        OwnStory ownStory = new OwnStory();
+
+        ownStory.setStory(request.getStory());
+        ownStory.setStudent(student);
+
         return ownStoryRepository.save(ownStory);
     }
+
+
     @GetMapping
     public List<OwnStory> getAllStories(){
         return ownStoryRepository.findAll();

@@ -1,5 +1,6 @@
 package org.example.wonderreadsapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -15,6 +16,7 @@ public class Student {
     private String contactNo;
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+
     private List<OwnStory> ownStories;
 
     public Student(){
