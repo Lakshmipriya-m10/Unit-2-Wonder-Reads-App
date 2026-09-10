@@ -2,6 +2,7 @@ package org.example.wonderreadsapi.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,7 +16,7 @@ public class OwnStory {
     private String story;
 
     @ManyToOne
-    @JsonBackReference // Tells Jackson not to serialize this back
+    @JsonIgnore
     @JoinColumn(name = "student_id")
     private Student student;
 

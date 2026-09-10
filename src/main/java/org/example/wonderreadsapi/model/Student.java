@@ -17,7 +17,7 @@ public class Student {
     private String contactNo;
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
-    @JsonBackReference //// Prevents infinite recursion
+    @JsonIgnore
     private List<OwnStory> ownStories;
 
     public Student(){

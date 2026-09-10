@@ -16,7 +16,8 @@ public class QuizQusController {
 
 @GetMapping
     public List<QuizQus> getAllQuiz() {
-        return quizQusRepository.findAll();
+
+    return quizQusRepository.findAll();
     }
 
     @GetMapping("/story/{storyId}")
@@ -29,11 +30,13 @@ public class QuizQusController {
     // POST a new quiz question
     @PostMapping
     public QuizQus createQuiz(@RequestBody QuizQus quizQus) {
-        return quizQusRepository.save(quizQus);
+
+    return quizQusRepository.save(quizQus);
     }
 
     @DeleteMapping("/{id}")
     public void deleteQuiz(@PathVariable Long id) {
-        quizQusRepository.deleteById(id);
+
+    quizQusRepository.deleteById(id);
     }
 }

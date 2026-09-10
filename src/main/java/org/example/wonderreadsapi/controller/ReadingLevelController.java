@@ -19,6 +19,7 @@ public class ReadingLevelController {
 
     @GetMapping
     public List<ReadingLevel> getAllReadingLevels() {
+
         return readingLevelRepository.findAll();
     }
     @GetMapping("/{id}")
@@ -51,6 +52,7 @@ public class ReadingLevelController {
 
     @DeleteMapping("/{id}")
     public void deleteReadingLevel(@PathVariable Long id) {
+
         readingLevelRepository.deleteById(id);
     }
 }

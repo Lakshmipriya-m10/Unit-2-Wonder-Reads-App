@@ -17,6 +17,7 @@ public class Storycontroller {
 
     @GetMapping
     public List<Story> getAllStories() {
+
         return storyRepository.findAll();
     }
 
@@ -26,6 +27,7 @@ public class Storycontroller {
     }
     @PostMapping
     public Story createStory(@RequestBody Story story) {
+
         return storyRepository.save(story);
     }
     @PutMapping("/{id}")
@@ -41,6 +43,7 @@ public class Storycontroller {
     }
     @DeleteMapping("/{id}")
     public void deleteStory(@PathVariable Long id) {
+
         storyRepository.deleteById(id);
     }
 
