@@ -2,6 +2,7 @@ package org.example.wonderreadsapi.controller;
 
 import org.example.wonderreadsapi.model.Story;
 import org.example.wonderreadsapi.repository.StoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,21 +12,22 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:5173")
 public class Storycontroller {
 
-    private final StoryRepository storyRepository;
+    @Autowired
+    private StoryRepository storyRepository;
 
-    public Storycontroller(StoryRepository storyRepository) {
-        this.storyRepository = storyRepository;
-    }
     @GetMapping
     public List<Story> getAllStories() {
+
         return storyRepository.findAll();
     }
+
     @GetMapping("/{id}")
     public Story getStoryById(@PathVariable Long id) {
         return storyRepository.findById(id).orElseThrow(() -> new RuntimeException("Story Not found"));
     }
     @PostMapping
     public Story createStory(@RequestBody Story story) {
+
         return storyRepository.save(story);
     }
     @PutMapping("/{id}")
@@ -41,6 +43,7 @@ public class Storycontroller {
     }
     @DeleteMapping("/{id}")
     public void deleteStory(@PathVariable Long id) {
+
         storyRepository.deleteById(id);
     }
 

@@ -1,5 +1,6 @@
 package org.example.wonderreadsapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class Story {
             cascade = CascadeType.ALL,
             fetch = FetchType.EAGER
     )
+    @JsonIgnore
     private List<QuizQus> questions;
 
     public Story() {

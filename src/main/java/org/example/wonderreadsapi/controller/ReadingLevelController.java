@@ -3,6 +3,7 @@ package org.example.wonderreadsapi.controller;
 
 import org.example.wonderreadsapi.model.ReadingLevel;
 import org.example.wonderreadsapi.repository.ReadingLevelRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,15 +13,13 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:5173")
 public class ReadingLevelController {
 
-    private final ReadingLevelRepository readingLevelRepository;
+    @Autowired
+    private ReadingLevelRepository readingLevelRepository;
 
-
-    public ReadingLevelController(ReadingLevelRepository readingLevelRepository) {
-        this.readingLevelRepository = readingLevelRepository;
-    }
 
     @GetMapping
     public List<ReadingLevel> getAllReadingLevels() {
+
         return readingLevelRepository.findAll();
     }
     @GetMapping("/{id}")
@@ -53,6 +52,7 @@ public class ReadingLevelController {
 
     @DeleteMapping("/{id}")
     public void deleteReadingLevel(@PathVariable Long id) {
+
         readingLevelRepository.deleteById(id);
     }
 }
