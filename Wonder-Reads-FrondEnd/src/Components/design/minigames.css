@@ -1,0 +1,30 @@
+
+table {
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0 15px;
+}
+
+tbody tr {
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.5s;    
+}
+
+tbody tr:hover {
+  transform: scale(1.05);
+}
+
+td {
+  padding: 15px;
+  font-size: 17px;
+}
+
+.game-link {
+  text-decoration: none;
+  color: #6a1b9a;
+  font-weight: bold;
+  font-size: 18px;
+}
+.game-link:hover {
+  color: #ff9800;
+}
