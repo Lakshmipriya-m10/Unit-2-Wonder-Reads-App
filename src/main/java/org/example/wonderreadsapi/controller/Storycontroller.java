@@ -1,5 +1,4 @@
 package org.example.wonderreadsapi.controller;
-
 import org.example.wonderreadsapi.model.Story;
 import org.example.wonderreadsapi.repository.StoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

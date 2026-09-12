@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/own-stories")
@@ -29,6 +30,20 @@ public class OwnStoryController {
                 .orElseThrow(() -> new RuntimeException("Story not found"));
 
         ownStory.setStory(request.getStory());
+
+        return ownStoryRepository.save(ownStory);
+    }
+    @PatchMapping("/{id}")
+    public OwnStory patchOwnStory(
+            @PathVariable Long id,
+            @RequestBody Map<String, String> updates) {
+
+        OwnStory ownStory = ownStoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Own story not found"));
+
+        if (updates.containsKey("story")) {
+            ownStory.setStory(updates.get("story"));
+        }
 
         return ownStoryRepository.save(ownStory);
     }
