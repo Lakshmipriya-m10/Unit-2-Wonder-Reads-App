@@ -1,69 +1,16 @@
-# 📚 Wonder Reads App
+# React + Vite
 
-## 📖 About The Project
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Wonder Reads is an interactive reading application built with React.  
-The app helps children improve reading skills through stories, audio narration, quizzes, rewards, and mini-games.
+Currently, two official plugins are available:
 
-Users can explore stories based on reading levels, read interactive content, answer quizzes, and enjoy learning activities.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
----
+## React Compiler
 
-## ✨ Features
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### 📚 Reading System
-- Browse stories by reading level
-- Display story details and images
-- Read interactive stories
-- Navigate through story pages
+## Expanding the ESLint configuration
 
-### 🔊 Audio Narration
-- Play story audio
-- Pause and resume narration
-- Stop audio playback
-
-### 📝 Quiz System
-- Answer story-based questions
-- Calculate scores
-- Receive rewards after completing quizzes
-
-### ✍️ Create Story
-- Users can submit their own stories
-- Form validation for user input
-- Confirmation dialog after submission
-
-### 🎮 Mini Games
-- Memory Flip Card Game
-- Interactive learning activities
-
-### 📱 Responsive Design
-- Desktop, tablet, and mobile-friendly layout
-- Hamburger menu navigation
-
----
-
-## 🛠️ Technologies Used
-
-- React.js
-- JavaScript (ES6+)
-- Vite
-- React Router
-- CSS3
-- HTML5
-- Vitest (Testing)
-- Cloudinary (Image and Media Hosting)
-
----
-
-
-## 🌐 Live Demo
-
-View the deployed application here:
-
-[(https://wonder-reads.netlify.app/)]
-
----
-
-## 👩‍💻 Author
-
-**Lakshmi Priya Jeyaram**
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
