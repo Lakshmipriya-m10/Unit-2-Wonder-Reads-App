@@ -52,8 +52,19 @@ const OwnStories = () => {
           >
             {story.story}
           </p>
+          <p
+            style={{
+              fontSize: "16px",
+              fontWeight: "bold",
+              marginTop: "15px",
+              color:"blue",
+            }}
+          >
+            Written by: {story.student?.name}
+          </p>
 
         </div>
+        
       ))}
     </div>
   );
