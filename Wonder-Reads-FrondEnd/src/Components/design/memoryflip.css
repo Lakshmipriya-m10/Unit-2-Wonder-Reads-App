@@ -1,0 +1,54 @@
+.memory-card {
+  width: 150px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memory-card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-back-image,
+.card-front-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back-image img,
+.card-front-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+/* Front Pokemon image */
+.card-front-image {
+  transform: rotateY(180deg);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 25px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

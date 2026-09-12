@@ -1,0 +1,25 @@
+
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(197, 207, 216);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 10px;
+  width: fit-content;  
+  height: fit-content;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.button{
+    font-size: medium;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(158, 81, 226);
+}

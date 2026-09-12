@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&family=Comic+Neue:wght@400;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Style */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff8e7;
+  color: #3b2f2f;
+  line-height: 1.6;
+}
+
+/* App Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #618ee1;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+/* Layout Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flex Helper */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid Helper */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
