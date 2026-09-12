@@ -23,3 +23,21 @@ dist-ssr
 *.sln
 *.sw?
 src/assets/*.mp4
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+app.env
+node_modules/
