@@ -1,5 +1,9 @@
 
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
+import "../design/ownstories.css";
+
 
 const OwnStories = () => {
   const [stories, setStories] = useState([]);
@@ -30,7 +34,7 @@ const OwnStories = () => {
       <h2>Own Stories</h2>
 
       {stories.map((story) => (
-        <div
+        <div className="story-card"
           key={story.storyId}
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.9)",
@@ -60,9 +64,28 @@ const OwnStories = () => {
               color:"blue",
             }}
           >
-            Written by: {story.student.name}
+          Written by: {story.student?.name || "Unknown"}
           </p>
+          <div className="story-actions">
+          <button 
+          className="icon-button" 
+          onClick={() => 
+          handleEdit(story) 
+          }
+          title="Edit story"
+          >
+          <FontAwesomeIcon icon={faPen} />
+          </button>
 
+          <button className="icon-button" onClick={() => 
+          handleDelete(story) 
+          }
+          title="Delete story"
+          >
+          <FontAwesomeIcon icon={faTrash} />
+          </button>
+          
+          </div>
         </div>
         
       ))}
