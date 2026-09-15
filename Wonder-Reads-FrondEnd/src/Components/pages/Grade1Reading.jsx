@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Grade1Reading = () => {
@@ -24,7 +27,9 @@ const Grade1Reading = () => {
         const grade1Stories = data.filter(
           (story) => String(story.Grade) === "1"
         );
+
         console.log("Grade 1 stories:", grade1Stories);
+
         setStories(grade1Stories);
         setLoading(false);
       })
@@ -33,7 +38,6 @@ const Grade1Reading = () => {
         setLoading(false);
       });
   }, []);
-  
 
   // Stop speech when leaving the page
   useEffect(() => {
@@ -42,7 +46,7 @@ const Grade1Reading = () => {
     };
   }, []);
 
-  // Read one story
+  // Read story
   const readStory = (story) => {
     if (!story || !story.Text) {
       console.log("No story text available");
@@ -54,6 +58,7 @@ const Grade1Reading = () => {
     speech.rate = 0.5;
     speech.pitch = 1;
     speech.lang = "en-US";
+
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(speech);
   };
@@ -75,7 +80,9 @@ const Grade1Reading = () => {
 
   // Get images from SQL
   const getImages = (story) => {
-    if (!story || !story.image) return [];
+    if (!story || !story.image) {
+      return [];
+    }
 
     if (Array.isArray(story.image)) {
       return story.image;
@@ -103,148 +110,206 @@ const Grade1Reading = () => {
   }
 
   return (
-    <div
-      style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-        padding: "30px",
-      }}
-    >
-      <h2>Grade 1 - Reading</h2>
-      <Link to="/reading">
-        <button
-          style={{
-            padding: "10px 20px",
-            marginBottom: "20px",
-            borderRadius: "8px",
-            border: "none",
-            cursor: "pointer",
-            fontSize: "18px",
-            color: "black"
-          }}
-        >
-          ← Back to Reading
-        </button>
-      </Link>
-      {stories.map((story) => {
-        const images = getImages(story);
+    <>
+      {/* Swiper arrow styling */}
+      <style>
+        {`
+          .grade1-swiper {
+            width: 350px;
+            height: 220px;
+          }
 
-        return (
-          <div
-            key={story.id}
+          .grade1-swiper .swiper-button-prev,
+          .grade1-swiper .swiper-button-next {
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            color: black;
+          }
+
+          .grade1-swiper .swiper-button-prev {
+            left: 5px;
+          }
+
+          .grade1-swiper .swiper-button-next {
+            right: 5px;
+          }
+
+          .grade1-swiper .swiper-button-prev::after,
+          .grade1-swiper .swiper-button-next::after {
+            font-size: 13px;
+            font-weight: bold;
+          }
+
+          .grade1-swiper .swiper-pagination-bullet {
+            width: 7px;
+            height: 7px;
+          }
+
+          .grade1-swiper .swiper-pagination {
+            bottom: 5px;
+          }
+        `}
+      </style>
+
+      <div
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "100vh",
+          padding: "30px",
+        }}
+      >
+        <h2>Grade 1 - Reading</h2>
+
+        <Link to="/reading">
+          <button
             style={{
-              maxWidth: "1000px",
-              margin: "30px auto",
-              background: "white",
-              borderRadius: "20px",
-              padding: "25px",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-              display: "flex",
-              gap: "30px",
-              alignItems: "center",
+              padding: "10px 20px",
+              marginBottom: "20px",
+              borderRadius: "8px",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "18px",
+              color: "black",
             }}
           >
-            {/* LEFT - IMAGE */}
+            ← Back to Reading
+          </button>
+        </Link>
+
+        {stories.map((story) => {
+          const images = getImages(story);
+
+          return (
             <div
+              key={story.id}
               style={{
-                width: "45%",
-                flexShrink: 0,
+                maxWidth: "900px",
+                margin: "30px auto",
+                background: "white",
+                borderRadius: "20px",
+                padding: "25px",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+                display: "flex",
+                gap: "30px",
+                alignItems: "center",
               }}
             >
-              <Swiper
-                modules={[Navigation, Pagination]}
-                pagination={{ clickable: true }}
-                navigation
-                slidesPerView={1}
+              {/* LEFT - IMAGE CAROUSEL */}
+              <div
+                style={{
+                  width: "350px",
+                  flexShrink: 0,
+                }}
               >
-                {images.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={img}
-                      alt={`${story.title} ${index + 1}`}
-                      style={{
-                        width: "100%",
-                        height: "300px",
-                        objectFit: "contain",
-                        borderRadius: "15px",
-                      }}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                <Swiper
+                  className="grade1-swiper"
+                  modules={[Navigation, Pagination]}
+                  navigation={true}
+                  pagination={{ clickable: true }}
+                  slidesPerView={1}
+                >
+                  {images.map((img, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={img}
+                        alt={`${story.title} ${index + 1}`}
+                        style={{
+                          width: "100%",
+                          height: "220px",
+                          objectFit: "contain",
+                          borderRadius: "15px",
+                        }}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+
+              {/* RIGHT - STORY INFORMATION */}
+              <div
+                style={{
+                  flex: 1,
+                  textAlign: "left",
+                }}
+              >
+                <h2
+                  style={{
+                    fontSize: "28px",
+                    marginBottom: "10px",
+                  }}
+                >
+                  {story.title}
+                </h2>
+
+                <p
+                  style={{
+                    fontSize: "18px",
+                    lineHeight: "1.6",
+                    color: "#333",
+                  }}
+                >
+                  {story.Text}
+                </p>
+
+                {/* READ */}
+                <button
+                  className="button"
+                  onClick={() => readStory(story)}
+                  style={{
+                    marginTop: "15px",
+                    padding: "12px 25px",
+                    borderRadius: "10px",
+                    border: "none",
+                    cursor: "pointer",
+                    fontSize: "16px",
+                  }}
+                >
+                  🔊 Read Story
+                </button>
+
+                {/* STOP */}
+                <button
+                  className="button"
+                  onClick={stopReading}
+                  style={{
+                    marginLeft: "5px",
+                  }}
+                >
+                  Stop
+                </button>
+
+                {/* PAUSE */}
+                <button
+                  className="button"
+                  onClick={pauseReading}
+                  style={{
+                    marginLeft: "5px",
+                  }}
+                >
+                  Pause
+                </button>
+
+                {/* RESUME */}
+                <button
+                  className="button"
+                  onClick={resumeReading}
+                  style={{
+                    marginLeft: "5px",
+                  }}
+                >
+                  Resume
+                </button>
+              </div>
             </div>
-
-            {/* RIGHT - STORY INFORMATION */}
-            <div
-              style={{
-                flex: 1,
-                textAlign: "left",
-              }}
-            >
-              <h2
-                style={{
-                  fontSize: "28px",
-                  marginBottom: "10px",
-                }}
-              >
-                {story.title}
-              </h2>
-
-
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.6",
-                  color: "#333",
-                }}
-              >
-                {story.Text}
-              </p>
-
-              {/* READ BUTTON */}
-              <button
-                className="button"
-                onClick={() => readStory(story)}
-                style={{
-                  marginTop: "15px",
-                  padding: "12px 25px",
-                  borderRadius: "10px",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: "16px",
-                }}
-              >
-                🔊 Read Story
-              </button>
-
-              <button
-                className="button"
-                onClick={stopReading}
-              >
-                Stop
-              </button>
-
-              <button
-                className="button"
-                onClick={pauseReading}
-              >
-                Pause
-              </button>
-
-              <button
-                className="button"
-                onClick={resumeReading}
-              >
-                Resume
-              </button>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
