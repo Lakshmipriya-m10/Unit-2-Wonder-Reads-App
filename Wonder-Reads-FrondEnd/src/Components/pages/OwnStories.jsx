@@ -8,6 +8,7 @@ import "../design/ownstories.css";
 const OwnStories = () => {
   const [stories, setStories] = useState([]);
 
+  // GET stories
   useEffect(() => {
     fetch("http://localhost:8080/api/own-stories")
       .then((response) => response.json())
@@ -19,6 +20,35 @@ const OwnStories = () => {
         console.error("Error fetching stories:", error);
       });
   }, []);
+
+ // EDIT
+  const handleEdit = (story) => {
+    console.log("EDIT CLICKED:", story);
+    setEditStory(story);
+  };
+
+ // DELETE
+  const handleDelete = (story) => {
+  fetch(`http://localhost:8080/api/own-stories/${story.storyId}`, {
+    method: "DELETE",
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to delete story");
+      }
+
+      return response.text();
+    })
+    .then(() => {
+      setStories(
+        stories.filter((item) => item.storyId !== story.storyId)
+      );
+    })
+    .catch((error) => {
+      console.error("Error deleting story:", error);
+ 
+  })
+  };
 
   return (
     <div
@@ -69,17 +99,15 @@ const OwnStories = () => {
           <div className="story-actions">
           <button 
           className="icon-button" 
-          onClick={() => 
-          handleEdit(story) 
-          }
+          onClick={() => handleEdit(story) }
           title="Edit story"
           >
           <FontAwesomeIcon icon={faPen} />
           </button>
 
-          <button className="icon-button" onClick={() => 
-          handleDelete(story) 
-          }
+          <button 
+          className="icon-button" 
+          onClick={() => handleDelete(story) }
           title="Delete story"
           >
           <FontAwesomeIcon icon={faTrash} />
@@ -94,5 +122,4 @@ const OwnStories = () => {
 };
 
 export default OwnStories;
-
 
