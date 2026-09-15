@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../design/quiz.css";
 import Button from "../pages/Button";
 
+
 const Quiz = () => {
 
   // All stories from SQL
@@ -224,7 +225,9 @@ const Quiz = () => {
   console.log("QUESTIONS:", questions);
   console.log("ANSWERS:", answers);
   return (
+   
     <div>
+     
       <div className="card">
         <label htmlFor="storySelect">
           Select Story:

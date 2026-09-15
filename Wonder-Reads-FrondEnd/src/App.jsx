@@ -10,7 +10,7 @@ import Reading from "./Components/pages/Reading.jsx";
 import StoryForm from "./Components/pages/StoryForm.jsx";
 import MiniGames from "./Components/pages/MiniGames.jsx";
 import ReadingCards from './Components/pages/ReadingCard.jsx';
-import AllStories from './Components/pages/AllStories.jsx';
+
 
 import Quiz from './Components/pages/Quiz.jsx';
 import MemoryFlip from './Components/pages/MemoryFlip.jsx';
@@ -36,8 +36,6 @@ function App() {
           <Route path="/Quiz" element={<Quiz />} />
           <Route path="/StoryForm" element={<StoryForm />} />
           <Route path="/MiniGames" element={<MiniGames />} />
-          <Route path="/AllStories" element={<AllStories />} />
-        
           <Route path="/MemoryFlip" element={<MemoryFlip />} />
           <Route path="/ButterflyGame" element={<ButterflyGame />} />
           <Route path="/FruitSlice" element={<FruitSlice />} />
