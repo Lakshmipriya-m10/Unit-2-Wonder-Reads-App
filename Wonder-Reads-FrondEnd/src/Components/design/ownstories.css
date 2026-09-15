@@ -1,0 +1,76 @@
+.own-stories-page {
+  background-image: url("https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.own-stories-page h2 {
+  text-align: center;
+}
+
+.story-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.story-text {
+  font-size: 18px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.story-author {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: blue;
+}
+
+.story-actions {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.edit-form {
+  background-color: white;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-form textarea {
+  width: 100%;
+  min-height: 250px;
+  padding: 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.edit-form button {
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

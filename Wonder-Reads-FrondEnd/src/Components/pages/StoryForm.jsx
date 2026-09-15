@@ -88,21 +88,6 @@ const CreateStory = () => {
   }
 };
 
-  const handleEdit = (story) => {
-    setEditingStory(story);
-  };
-
-  const handleDelete = () => {
-    setFormData({
-      name: "",
-      email: "",
-      contact: "",
-      story: ""
-    });
-
-    openDialog("All fields deleted successfully!");
-  };
-
   return (
     <div className="story-form-container">
 
@@ -162,21 +147,7 @@ const CreateStory = () => {
         >
           Submit Story
         </Button>
-        <Button
-          type="button"
-          onClick={handleEdit}
-          background="#8377d1"
-        >
-          Edit
-        </Button>
-        <Button
-          type="button"
-          onClick={handleDelete}
-          background="#3e6fba"
-        >
-          Delete
-        </Button>
-
+        
       </form>
 
       {/* React dialog popup  */}
