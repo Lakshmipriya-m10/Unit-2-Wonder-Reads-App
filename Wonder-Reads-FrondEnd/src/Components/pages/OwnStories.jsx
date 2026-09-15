@@ -7,6 +7,7 @@ import "../design/ownstories.css";
 
 const OwnStories = () => {
   const [stories, setStories] = useState([]);
+  const [editStory, setEditStory] = useState(null);
 
   // GET stories
   useEffect(() => {
@@ -21,33 +22,33 @@ const OwnStories = () => {
       });
   }, []);
 
- // EDIT
+  // EDIT
   const handleEdit = (story) => {
     console.log("EDIT CLICKED:", story);
     setEditStory(story);
   };
 
- // DELETE
+  // DELETE
   const handleDelete = (story) => {
-  fetch(`http://localhost:8080/api/own-stories/${story.storyId}`, {
-    method: "DELETE",
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to delete story");
-      }
+    fetch(`http://localhost:8080/api/own-stories/${story.storyId}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to delete story");
+        }
 
-      return response.text();
-    })
-    .then(() => {
-      setStories(
-        stories.filter((item) => item.storyId !== story.storyId)
-      );
-    })
-    .catch((error) => {
-      console.error("Error deleting story:", error);
- 
-  })
+        return response.text();
+      })
+      .then(() => {
+        setStories(
+          stories.filter((item) => item.storyId !== story.storyId)
+        );
+      })
+      .catch((error) => {
+        console.error("Error deleting story:", error);
+
+      })
   };
 
   return (
@@ -62,20 +63,29 @@ const OwnStories = () => {
       }}
     >
       <h2>Own Stories</h2>
+      {editStory && (
+        <div>
+          <textarea
+            value={editStory.story}
+            onChange={(edit) =>
+              setEditStory({
+                ...editStory,
+                story: edit.target.value,
+
+              })
+            }
+          />
+          <button onClick={() => setEditStory(null)}>
+            Cancel
+          </button>
+          
+        </div>
+      )}
 
       {stories.map((story) => (
         <div className="story-card"
           key={story.storyId}
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-            padding: "20px",
-            marginBottom: "20px",
-            borderRadius: "12px",
-            maxWidth: "800px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-          }}
+
         >
           <p
             style={{
@@ -87,35 +97,30 @@ const OwnStories = () => {
             {story.story}
           </p>
           <p
-            style={{
-              fontSize: "16px",
-              fontWeight: "bold",
-              marginTop: "15px",
-              color:"blue",
-            }}
+
           >
-          Written by: {story.student?.name || "Unknown"}
+            Written by: {story.student?.name || "Unknown"}
           </p>
           <div className="story-actions">
-          <button 
-          className="icon-button" 
-          onClick={() => handleEdit(story) }
-          title="Edit story"
-          >
-          <FontAwesomeIcon icon={faPen} />
-          </button>
+            <button
+              className="icon-button"
+              onClick={() => handleEdit(story)}
+              title="Edit story"
+            >
+              <FontAwesomeIcon icon={faPen} />
+            </button>
 
-          <button 
-          className="icon-button" 
-          onClick={() => handleDelete(story) }
-          title="Delete story"
-          >
-          <FontAwesomeIcon icon={faTrash} />
-          </button>
-          
+            <button
+              className="icon-button"
+              onClick={() => handleDelete(story)}
+              title="Delete story"
+            >
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
+
           </div>
         </div>
-        
+
       ))}
     </div>
   );
