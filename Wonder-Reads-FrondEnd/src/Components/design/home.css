@@ -2,13 +2,13 @@
     text-align: center;
     font-size: x-large;
     color: rgb(216, 216, 39);
-    padding: 10%;
+    padding: 5%;
 }
 
 .home-page h1 {
     text-align: center;
     font-size: 75px;
-    padding-top: 250px;
+    padding-top: 100px;
     color: aquamarine;
 }
 
@@ -22,3 +22,4 @@
     object-fit: cover;
     z-index: -1;
 }
+
