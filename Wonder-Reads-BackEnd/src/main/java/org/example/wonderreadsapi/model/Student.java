@@ -15,6 +15,18 @@ public class Student {
     private String name;
     private String email;
     private String contactNo;
+    private String username;
+    private String password;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
     @JsonIgnore
@@ -22,6 +34,14 @@ public class Student {
 
     public Student(){
 
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Long getId() {
