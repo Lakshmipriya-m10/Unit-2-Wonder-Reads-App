@@ -16,7 +16,7 @@ public class OwnStory {
     private String story;
 
     @ManyToOne
-    @JsonIgnore
+   // @JsonIgnore
     @JoinColumn(name = "student_id")
     private Student student;
 

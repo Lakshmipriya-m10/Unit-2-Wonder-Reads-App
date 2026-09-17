@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 import "../design/ownstories.css";
 import Button from "../pages/Button";
+import { Link } from "react-router-dom";
 
 
 const OwnStories = () => {
@@ -83,6 +84,22 @@ const OwnStories = () => {
   return (
     <div className="own-stories-page">
      <h2>Own Stories</h2>
+      <Link to="/reading">
+               <button
+                 style={{
+                   padding: "10px 20px",
+                   marginBottom: "20px",
+                   borderRadius: "8px",
+                   border: "none",
+                   cursor: "pointer",
+                   fontSize: "18px",
+                   color: "black",
+                 }}
+               >
+                 ← Back to Reading
+               </button>
+             </Link>
+     
      
    {stories.map((story) => (
   <div className="story-card" key={story.storyId}>

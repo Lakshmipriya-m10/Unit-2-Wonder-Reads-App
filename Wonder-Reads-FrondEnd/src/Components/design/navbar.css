@@ -73,6 +73,24 @@ nav .hamburger span {
     background-color: white;
     border-radius: 0.2rem;
 }
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-button:hover {
+  background: white;
+  color: #333;
+}
 /* Responsive grid for tablets and phones */
 @media (max-width: 480px) {
     nav .hamburger {
@@ -99,5 +117,6 @@ nav .hamburger span {
     nav ul li a {
         margin: 0.2rem 0.5rem;
     }
+
 
 }
