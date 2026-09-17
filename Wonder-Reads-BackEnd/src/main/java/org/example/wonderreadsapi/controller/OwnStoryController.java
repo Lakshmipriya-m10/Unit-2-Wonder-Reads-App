@@ -24,7 +24,17 @@ public class OwnStoryController {
     private StudentRepository studentRepository;
 
     @PutMapping("/{id}")
-    public OwnStory updateStory(@PathVariable Long id, @RequestBody OwnStoryDto request) {
+    public OwnStory updateStory(
+            @PathVariable Long id,
+            @RequestBody OwnStoryDto request,
+            @RequestHeader("Student-Id") Long studentId) {
+        Student student = studentRepository.findById(studentId)
+                .orElseThrow(() -> new RuntimeException("Student not found"));
+
+        if (!"ADMIN".equals(student.getRole())) {
+            throw new RuntimeException("Only ADMIN can edit stories");
+        }
+
 
         OwnStory ownStory = ownStoryRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Story not found"));
@@ -33,6 +43,7 @@ public class OwnStoryController {
 
         return ownStoryRepository.save(ownStory);
     }
+
     @PatchMapping("/{id}")
     public OwnStory patchOwnStory(
             @PathVariable Long id,
@@ -84,11 +95,21 @@ public class OwnStoryController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteStory(@PathVariable Long id) {
+    public void deleteStory(
+            @PathVariable Long id,
+            @RequestHeader("Student-Id") Long studentId) {
+
+        Student student = studentRepository.findById(studentId)
+                .orElseThrow(() -> new RuntimeException("Student not found"));
+
+        if (!"ADMIN".equals(student.getRole())) {
+            throw new RuntimeException("Only ADMIN can delete stories");
+        }
+
         ownStoryRepository.deleteById(id);
-
+    }
 
     }
-    }
+
 
 

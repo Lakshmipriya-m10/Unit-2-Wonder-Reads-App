@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 const OwnStories = () => {
   const [stories, setStories] = useState([]);
   const [editStory, setEditStory] = useState(null);
+  const userRole = localStorage.getItem("role");
 
   // GET stories
   useEffect(() => {
@@ -31,9 +32,12 @@ const OwnStories = () => {
   const handleUpdate = () => {
       fetch(`http://localhost:8080/api/own-stories/${editStory.storyId}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
+   
+        headers: {
+            "Content-Type": "application/json",
+             "Student-Id": localStorage.getItem("studentId"),
+                  },
+      
       body: JSON.stringify(editStory),
     })
     .then((response) => {
@@ -62,6 +66,9 @@ const OwnStories = () => {
   const handleDelete = (story) => {
     fetch(`http://localhost:8080/api/own-stories/${story.storyId}`, {
       method: "DELETE",
+       headers: {
+      "Student-Id": localStorage.getItem("studentId"),
+    },
     })
       .then((response) => {
         if (!response.ok) {
@@ -145,6 +152,8 @@ const OwnStories = () => {
         </p>
 
         <div className="story-actions">
+          {userRole === "ADMIN" && (
+            <>
           <button
             className="icon-button"
             onClick={() => handleEdit(story)}
@@ -160,6 +169,8 @@ const OwnStories = () => {
           >
             <FontAwesomeIcon icon={faTrash} />
           </button>
+          </>
+          )}
         </div>
       </>
 

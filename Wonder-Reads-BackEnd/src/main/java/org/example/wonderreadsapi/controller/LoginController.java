@@ -29,7 +29,14 @@ public class LoginController {
             Student foundStudent = student.get();
 
             if (foundStudent.getPassword().equals(loginDto.getPassword())) {
-                return ResponseEntity.ok("Login successful");
+                return ResponseEntity.ok(
+                        java.util.Map.of(
+                                "message", "Login successful",
+                                "studentId", foundStudent.getId(),
+                                "username", foundStudent.getUsername(),
+                                "role", foundStudent.getRole()
+                        )
+                );
             }
         }
 
