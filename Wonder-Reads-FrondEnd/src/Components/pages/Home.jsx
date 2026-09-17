@@ -31,6 +31,7 @@ const Home = () => {
     const message = await response.text();
 
     if (response.ok) {
+        sessionStorage.setItem("isLoggedIn", "true");
       navigate("/About");
     } else {
       setDialogMessage(message);
@@ -75,7 +76,7 @@ const Home = () => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter username"
-                autoComplete="current-password"
+                autoComplete="username"
                 required
               />
             </div>
@@ -88,7 +89,7 @@ const Home = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                autoComplete="current-password"
+                autoComplete="password"
                 required
               />
             </div>
