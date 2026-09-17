@@ -13,46 +13,37 @@ const Home = () => {
   const dialogRef = useRef(null);
   const [dialogMessage, setDialogMessage] = useState("");
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+ const handleLogin = async (e) => {
+  e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:8080/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-        }),
-      });
+  try {
+    const response = await fetch("http://localhost:8080/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    });
 
-      const data = await response.json();
+    const message = await response.text();
 
-      if (response.ok) {
-
-        navigate("/About");
-
-      } else {
-
-        setDialogMessage(
-          
-          data.message || "Please enter the correct username or password."
-        );
-
-        dialogRef.current.showModal();
-      }
-
-    } catch (error) {
-
-      console.error("Login error:", error);
-
-      setDialogMessage("Unable to connect to the server.");
-
+    if (response.ok) {
+      navigate("/About");
+    } else {
+      setDialogMessage(message);
       dialogRef.current.showModal();
     }
-  };
+
+  } catch (error) {
+    console.error("Login error:", error);
+
+    setDialogMessage("Unable to connect to the server.");
+    dialogRef.current.showModal();
+  }
+};
 
   return (
     <div className="home-page">
@@ -84,7 +75,7 @@ const Home = () => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter username"
-                autoComplete="username"
+                autoComplete="current-password"
                 required
               />
             </div>
@@ -97,7 +88,7 @@ const Home = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                autoComplete="password"
+                autoComplete="current-password"
                 required
               />
             </div>
