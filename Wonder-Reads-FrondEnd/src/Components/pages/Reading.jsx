@@ -8,7 +8,6 @@ const Reading = ({ image, title, lexile, grade, link }) => {
 
   return (
     <div className="card-container">
-
       {/* Clickable Image */}
       <Link to={link}>
         <img
@@ -17,13 +16,9 @@ const Reading = ({ image, title, lexile, grade, link }) => {
           className="card-img"
         />
       </Link>
-
       <h4 className="title">Title: {title}</h4>
       <h4 className="lexile">Lexile: {lexile}</h4>
       <h4 className="grade">Grade: {grade}</h4>
-
-
-
     </div>
   );
 };

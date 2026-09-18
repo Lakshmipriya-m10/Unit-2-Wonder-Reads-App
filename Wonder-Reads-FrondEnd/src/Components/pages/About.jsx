@@ -34,7 +34,6 @@ const About = () => {
 
   return (
     <div className="about-page">
-
       <video autoPlay muted loop className="bg-video">
         <source
           src="https://res.cloudinary.com/o7vbtffn/video/upload/v1783617687/jellyfish_vj9vmo.mp4"

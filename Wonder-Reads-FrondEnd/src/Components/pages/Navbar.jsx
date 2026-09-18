@@ -22,12 +22,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      
+
       <Link to="/" className="title">Wonder Reads</Link>
       <div className="hamburger" onClick={() => {
         sethamburgerOpen(!hamburgerOpen);
       }}
-      
+
       >
         <span></span>
         <span></span>
@@ -40,12 +40,12 @@ const Navbar = () => {
         <li><NavLink to="/StoryForm">StoryForm</NavLink></li>
         <li><NavLink to="/MiniGames">MiniGames</NavLink></li>
       </ul>
-       {location.pathname !== "/" && (
-     <button className="logout-button" onClick={handleLogout}>
-  <FontAwesomeIcon icon={faRightFromBracket} />
-  Logout
-</button>
-       )}
+      {location.pathname !== "/" && (
+        <button className="logout-button" onClick={handleLogout}>
+          <FontAwesomeIcon icon={faRightFromBracket} />
+          Logout
+        </button>
+      )}
     </nav>
   );
 };

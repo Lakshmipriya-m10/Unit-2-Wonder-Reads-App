@@ -7,13 +7,10 @@ const Quiz = () => {
 
   // All stories from SQL
   const [stories, setStories] = useState([]);
-
   // Selected story ID
   const [selectedStory, setSelectedStory] = useState("");
-
   // Selected story from SQL
   const [currentStory, setCurrentStory] = useState(null);
-
   const [answers, setAnswers] = useState({});
   const [showResult, setShowResult] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,9 +25,7 @@ const Quiz = () => {
     const loadStories = async () => {
       try {
         setError("");
-
         console.log("Fetching stories...");
-
         const response = await fetch(
           "http://localhost:8080/api/stories"
         );
@@ -58,7 +53,6 @@ const Quiz = () => {
   }, []);
 
   // SELECT STORY
-
   const handleStoryChange = async (event) => {
     const storyId = event.target.value;
 
@@ -76,7 +70,6 @@ const Quiz = () => {
     if (!storyId) {
       return;
     }
-
     try {
       setLoading(true);
 
@@ -114,9 +107,7 @@ const Quiz = () => {
       setLoading(false);
     }
   };
-
   // HANDLE ANSWER
-
   const handleAnswerChange = (questionIndex, answer) => {
     setAnswers((previousAnswers) => ({
       ...previousAnswers,
@@ -141,7 +132,6 @@ const Quiz = () => {
   };
 
   // CHECK CORRECT ANSWER
-
   const isAnswerCorrect = (question, selectedAnswer) => {
     if (!selectedAnswer || !question) {
       return false;
@@ -160,7 +150,6 @@ const Quiz = () => {
         question.correctAnswer.answer
       );
     }
-
     return false;
   };
 
@@ -171,7 +160,6 @@ const Quiz = () => {
       setShowDialog(true);
       return;
     }
-
     if (!currentStory?.questions?.length) {
       setReward("No quiz questions available.");
       return;
@@ -225,9 +213,9 @@ const Quiz = () => {
   console.log("QUESTIONS:", questions);
   console.log("ANSWERS:", answers);
   return (
-   
+
     <div>
-     
+
       <div className="card">
         <label htmlFor="storySelect">
           Select Story:
@@ -372,7 +360,6 @@ const Quiz = () => {
               </div>
             )}
           {reward && (
-
             <div
               className="card"
               style={{
@@ -385,46 +372,37 @@ const Quiz = () => {
 
             </div>
           )}
-
           {questions.length > 0 && (
 
             <section>
-
               <Button
                 onClick={handleRestart}
                 background="#f4d35e"
               >
                 Restart
               </Button>
-
               <Button
                 onClick={handleReward}
                 background="#234b91"
               >
                 Reward
               </Button>
-
               <Button
                 onClick={handleSubmit}
                 background="#a53da2"
               >
                 Submit
               </Button>
-
             </section>
-
           )}
-
         </>
       )}
-
       {showDialog && (
 
         <dialog
           open
           className="quiz-dialog"
         >
-
           <p>
             Please submit the quiz before checking the reward.
           </p>

@@ -21,7 +21,6 @@ import Grade4Reading from './Components/pages/Grade4Reading.jsx';
 import Grade5Reading from './Components/pages/Grade5Reading.jsx';
 import OwnStories from './Components/pages/OwnStories.jsx';
 
-
 function App() {
   return (
     <div className="container">
@@ -99,11 +98,9 @@ function App() {
             <OwnStories />
             </ProtectedRoute>
            } />
-          
         </Routes>
       </main>
       <Footer />
-
     </div>
   );
 }

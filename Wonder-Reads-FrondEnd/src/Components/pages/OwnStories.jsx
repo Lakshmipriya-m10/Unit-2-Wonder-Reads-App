@@ -27,48 +27,48 @@ const OwnStories = () => {
 
   // EDIT
   const handleEdit = (story) => {
-    console.log("EDIT CLICKED:", story); setEditStory(story); 
+    console.log("EDIT CLICKED:", story); setEditStory(story);
   };
   const handleUpdate = () => {
-      fetch(`http://localhost:8080/api/own-stories/${editStory.storyId}`, {
+    fetch(`http://localhost:8080/api/own-stories/${editStory.storyId}`, {
       method: "PUT",
-   
-        headers: {
-            "Content-Type": "application/json",
-             "Student-Id": localStorage.getItem("studentId"),
-                  },
-      
+
+      headers: {
+        "Content-Type": "application/json",
+        "Student-Id": localStorage.getItem("studentId"),
+      },
+
       body: JSON.stringify(editStory),
     })
-    .then((response) => {
+      .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to edit story");
         }
-          return response.json();
-    })
-    .then((updatedStory) => {
-      setStories(
-        stories.map((story) =>
-          story.storyId === updatedStory.storyId
-            ? updatedStory
-            : story
-        )
-      );
+        return response.json();
+      })
+      .then((updatedStory) => {
+        setStories(
+          stories.map((story) =>
+            story.storyId === updatedStory.storyId
+              ? updatedStory
+              : story
+          )
+        );
 
-      setEditStory(null);
-    })
-    .catch((error) => {
-      console.error("Error updating story:", error);
-    });
-};
+        setEditStory(null);
+      })
+      .catch((error) => {
+        console.error("Error updating story:", error);
+      });
+  };
 
   // DELETE
   const handleDelete = (story) => {
     fetch(`http://localhost:8080/api/own-stories/${story.storyId}`, {
       method: "DELETE",
-       headers: {
-      "Student-Id": localStorage.getItem("studentId"),
-    },
+      headers: {
+        "Student-Id": localStorage.getItem("studentId"),
+      },
     })
       .then((response) => {
         if (!response.ok) {
@@ -90,97 +90,97 @@ const OwnStories = () => {
 
   return (
     <div className="own-stories-page">
-     <h2>Own Stories</h2>
+      <h2>Own Stories</h2>
       <Link to="/reading">
-               <button
-                 style={{
-                   padding: "10px 20px",
-                   marginBottom: "20px",
-                   borderRadius: "8px",
-                   border: "none",
-                   cursor: "pointer",
-                   fontSize: "18px",
-                   color: "black",
-                 }}
-               >
-                 ← Back to Reading
-               </button>
-             </Link>
-     
-     
-   {stories.map((story) => (
-  <div className="story-card" key={story.storyId}>
+        <button
+          style={{
+            padding: "10px 20px",
+            marginBottom: "20px",
+            borderRadius: "8px",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "18px",
+            color: "black",
+          }}
+        >
+          ← Back to Reading
+        </button>
+      </Link>
 
-    {editStory && editStory.storyId === story.storyId ? (
-      
-      // EDIT FORM
-      <div className="edit-form">
-        <textarea
-          value={editStory.story}
-          onChange={(edit) =>
-            setEditStory({
-              ...editStory,
-              story: edit.target.value,
-            })
-          }
-              rows="10"
-             
-        />
 
-       <Button onClick={handleUpdate}>
-          Save
-        </Button>
+      {stories.map((story) => (
+        <div className="story-card" key={story.storyId}>
 
-        <Button onClick={() => setEditStory(null)}>
-          Cancel
-        </Button>
-      </div>
+          {editStory && editStory.storyId === story.storyId ? (
 
-    ) : (
+            // EDIT FORM
+            <div className="edit-form">
+              <textarea
+                value={editStory.story}
+                onChange={(edit) =>
+                  setEditStory({
+                    ...editStory,
+                    story: edit.target.value,
+                  })
+                }
+                rows="10"
 
-      <>
-        <p className="story-text">
-          {story.story}
-        </p>
-      <br></br>
-        <p className="story-author">
-          Written by:{"  "}
-          {story.student && story.student.name
-            ? story.student.name
-            : "Unknown"}
-      
-        </p>
+              />
 
-        <div className="story-actions">
-          {userRole === "ADMIN" && (
+              <Button onClick={handleUpdate}>
+                Save
+              </Button>
+
+              <Button onClick={() => setEditStory(null)}>
+                Cancel
+              </Button>
+            </div>
+
+          ) : (
+
             <>
-          <button
-            className="icon-button"
-            onClick={() => handleEdit(story)}
-            title="Edit story"
-          >
-            <FontAwesomeIcon icon={faPen} />
-          </button>
+              <p className="story-text">
+                {story.story}
+              </p>
+              <br></br>
+              <p className="story-author">
+                Written by:{"  "}
+                {story.student && story.student.name
+                  ? story.student.name
+                  : "Unknown"}
 
-          <button
-            className="icon-button"
-            onClick={() => handleDelete(story)}
-            title="Delete story"
-          >
-            <FontAwesomeIcon icon={faTrash} />
-          </button>
-          </>
+              </p>
+
+              <div className="story-actions">
+                {userRole === "ADMIN" && (
+                  <>
+                    <button
+                      className="icon-button"
+                      onClick={() => handleEdit(story)}
+                      title="Edit story"
+                    >
+                      <FontAwesomeIcon icon={faPen} />
+                    </button>
+
+                    <button
+                      className="icon-button"
+                      onClick={() => handleDelete(story)}
+                      title="Delete story"
+                    >
+                      <FontAwesomeIcon icon={faTrash} />
+                    </button>
+                  </>
+                )}
+              </div>
+            </>
+
           )}
+
         </div>
-      </>
-
-    )}
-
-  </div>
-))}
+      ))}
     </div>
   );
-  
+
 };
 
 export default OwnStories;

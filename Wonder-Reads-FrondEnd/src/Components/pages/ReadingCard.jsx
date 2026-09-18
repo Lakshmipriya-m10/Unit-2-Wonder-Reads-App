@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const ReadingCards = () => {
   const [readingLevels, setReadingLevels] = useState([]);
+
    useEffect(() => {
     fetch("http://localhost:8080/api/readinglevels")
       .then((response) => response.json())
@@ -14,6 +15,7 @@ const ReadingCards = () => {
         console.error("Error fetching reading levels:", error);
       });
   }, []);
+
   return (
     <div className="reading-container">
       {readingLevels.map((item) => (
@@ -27,6 +29,7 @@ const ReadingCards = () => {
         />
       ))}
     </div>
+    
   );
 };
 

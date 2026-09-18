@@ -128,7 +128,7 @@ const MemoryFlip = () => {
             <h3 className='card'>Matches : {score} </h3>
             {win && (
                 <h2 className='card'>
-                     🏆 Congratulations! You Found All Pokémon Pairs!  🏆
+                    🏆 Congratulations! You Found All Pokémon Pairs!  🏆
                 </h2>
             )}
             <div className="card-align">
