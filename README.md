@@ -17,7 +17,8 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Session Storage](https://img.shields.io/badge/SessionStorage-000000?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 **Wonder Reads** is a full-stack web application that makes reading practice more engaging through stories, narration, quizzes, creative writing, and interactive games.
 
@@ -64,6 +65,14 @@ Wonder Reads is designed for children developing reading confidence, vocabulary,
 - Logout clears the current browser session flag and returns to the home page.
 - Responsive navigation includes a hamburger menu for smaller layouts.
 - Font Awesome icons are used for controls such as password visibility and logout.
+
+  ### 🔐 Frontend Security
+
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Session Storage](https://img.shields.io/badge/SessionStorage-000000?style=for-the-badge&logo=googlechrome&logoColor=white)
+
+- Protected routes using React Router `ProtectedRoute`
+- Login state stored using browser `sessionStorage`
 
 ### 📱 Responsive Design
 
