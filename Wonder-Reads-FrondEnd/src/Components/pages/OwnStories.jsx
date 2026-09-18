@@ -13,17 +13,19 @@ const OwnStories = () => {
   const userRole = localStorage.getItem("role");
 
   // GET stories
-  useEffect(() => {
-    fetch("http://localhost:8080/api/own-stories")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setStories(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching stories:", error);
-      });
-  }, []);
+useEffect(() => {
+  fetch("http://localhost:8080/api/own-stories", {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      setStories(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching stories:", error);
+    });
+}, []);
 
   // EDIT
   const handleEdit = (story) => {

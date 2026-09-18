@@ -20,10 +20,10 @@ public class StoryController {
         return storyRepository.findAll();
     }
 
-    @GetMapping("/{id}")
+    /*@GetMapping("/{id}")
     public Story getStoryById(@PathVariable Long id) {
         return storyRepository.findById(id).orElseThrow(() -> new RuntimeException("Story Not found"));
-    }
+    }*/
     @PostMapping
     public Story createStory(@RequestBody Story story) {
 

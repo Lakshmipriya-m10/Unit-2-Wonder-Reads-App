@@ -43,7 +43,7 @@ const About = () => {
         title="About"
       />
       <div className="card">
-        <h2>🌟 Welcome to Wonder Reads </h2>
+        <h1>🌟 Welcome to Wonder Reads </h1>
         <p>
           "Making reading fun, creative, and interactive".</p>
         <p>

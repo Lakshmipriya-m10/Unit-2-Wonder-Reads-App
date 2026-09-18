@@ -12,7 +12,9 @@ const Grade2Reading = () => {
 
   // Get Grade 2 stories from SQL
   useEffect(() => {
-    fetch("http://localhost:8080/api/stories")
+    fetch("http://localhost:8080/api/stories",{
+           method: "GET"
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch stories");
@@ -115,7 +117,7 @@ const Grade2Reading = () => {
         padding: "30px",
       }}
     >
-      <h2>Grade 2 - Reading</h2>
+      <h1>Grade 2 - Reading</h1>
       <Link to="/reading">
         <button
           style={{

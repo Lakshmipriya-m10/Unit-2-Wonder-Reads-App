@@ -44,7 +44,7 @@ public class OwnStoryController {
         return ownStoryRepository.save(ownStory);
     }
 
-    @PatchMapping("/{id}")
+   /* @PatchMapping("/{id}")
     public OwnStory patchOwnStory(
             @PathVariable Long id,
             @RequestBody Map<String, String> updates) {
@@ -57,7 +57,7 @@ public class OwnStoryController {
         }
 
         return ownStoryRepository.save(ownStory);
-    }
+    }*/
 
     @PostMapping
     public OwnStory createStory(@RequestBody OwnStoryDto request) {
