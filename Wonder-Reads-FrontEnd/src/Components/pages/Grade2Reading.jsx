@@ -12,7 +12,9 @@ const Grade2Reading = () => {
 
   // Get Grade 2 stories from SQL
   useEffect(() => {
-    fetch("http://localhost:8080/api/stories")
+    fetch("http://localhost:8080/api/stories",{
+       method : "GET"
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch stories");
