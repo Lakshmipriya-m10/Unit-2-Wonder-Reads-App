@@ -2,49 +2,58 @@ import React, { useRef, useState } from "react";
 import "../design/home.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../pages/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
 
 const Home = () => {
 
   const navigate = useNavigate();
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [showPassword, setShowPassword] = useState(false);
   const dialogRef = useRef(null);
   const [dialogMessage, setDialogMessage] = useState("");
 
- const handleLogin = async (e) => {
-  e.preventDefault();
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch("http://localhost:8080/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-    });
+    try {
+      const response = await fetch("http://localhost:8080/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
 
-    const message = await response.text();
+      const data = await response.json();
 
-    if (response.ok) {
+      console.log(data);
+
+      if (response.ok) {
+
+        localStorage.setItem("username", data.username);
+        localStorage.setItem("studentId", data.studentId);
+        localStorage.setItem("role", data.role);
+
         sessionStorage.setItem("isLoggedIn", "true");
-      navigate("/About");
-    } else {
-      setDialogMessage(message);
+        navigate("/About");
+      } else {
+        setDialogMessage(data.message);
+        dialogRef.current.showModal();
+      }
+
+    } catch (error) {
+      console.error("Login error:", error);
+
+      setDialogMessage("Unable to connect to the server.");
       dialogRef.current.showModal();
     }
-
-  } catch (error) {
-    console.error("Login error:", error);
-
-    setDialogMessage("Unable to connect to the server.");
-    dialogRef.current.showModal();
-  }
-};
+  };
 
   return (
     <div className="home-page">
@@ -60,7 +69,7 @@ const Home = () => {
 
       <h1>Welcome to Wonder Reads</h1>
 
-       <div className="login-container">
+      <div className="login-container">
 
         <div className="login-box">
 
@@ -80,29 +89,36 @@ const Home = () => {
                 required
               />
             </div>
-
-            <div>
+            <div className="password-container">
               <label>Password</label>
 
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter password"
-                autoComplete="password"
-                required
-              />
+              <div className="password-field">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter password"
+                  autoComplete="password"
+                  required
+                />
+                <span
+                  className="password-eye"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  <FontAwesomeIcon
+                    icon={showPassword ? faEyeSlash : faEye}
+                  />
+                </span>
+              </div>
             </div>
-
             <Button type="submit">
               Login
             </Button>
-
           </form>
 
-      <p>
-        <strong>Explore Magical Stories And Books!</strong>
-      </p>
+          <p>
+            <strong>Explore Magical Stories And Books!</strong>
+          </p>
 
           {/* LOGIN ERROR DIALOG */}
           <dialog

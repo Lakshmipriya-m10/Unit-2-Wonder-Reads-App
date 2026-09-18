@@ -17,6 +17,19 @@ public class Student {
     private String contactNo;
     private String username;
     private String password;
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public void setOwnStories(List<OwnStory> ownStories) {
+        this.ownStories = ownStories;
+    }
 
     public String getUsername() {
         return username;

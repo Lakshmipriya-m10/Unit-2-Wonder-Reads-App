@@ -146,8 +146,23 @@
 }
 
 
-.story-dialog button:hover {
-  background-color: #388e3c;
+.password-field {
+  position: relative;
 }
 
+.password-field input {
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
 
+.password-eye {
+  position: absolute;
+  right: 100px;
+  color :black;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  font-size: 18px;
+}
