@@ -84,7 +84,7 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 
 ### Wireframes / Site Map
 
-`[(https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wireframe?node-id=103-194&t=bdhasLxcfeWEPDSj-0)]`
+https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wireframe?node-id=103-194&t=bdhasLxcfeWEPDSj-0
 
 ### Application Screenshots
 
