@@ -277,7 +277,7 @@ const Quiz = () => {
       {!loading && currentStory && (
         <>
 
-          <h1 className="card"> Quiz - {currentStory.title || `Story ${currentStory.id}`} </h1>
+          <h1 className="card"> {currentStory.title || `Story ${currentStory.id}`} </h1>
 
           {questions.length > 0 ? (
 
