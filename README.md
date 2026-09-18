@@ -84,9 +84,7 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 
 ### Wireframes / Site Map
 
-<(https://excalidraw.com/#json=c484QxfEjVmsT9Y1z93vk,_wFg9Zufj_MsHM3MnxdEIA)>
-
-`[Add wireframe image or Figma link here]`
+`[(https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wireframe?node-id=103-194&t=bdhasLxcfeWEPDSj-0)]`
 
 ### Application Screenshots
 
