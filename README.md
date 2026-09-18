@@ -3,12 +3,7 @@
 
 # Wonder Reads: Full-Stack Reading & Storytelling Application
 
-[[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=20232A)](https://react.dev/)](https://img.shields.io/badge/React-61DBFB?style=for-the-badge&logo=react&logoColor=333333)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES%20Modules-F7DF1E?logo=javascript&logoColor=000)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=fff)](https://vite.dev/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.1-6DB33F?logo=springboot&logoColor=fff)](https://spring.io/projects/spring-boot)
-[![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=fff)](https://www.java.com/)
-[![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=fff)](https://www.mysql.com/)
+https://img.shields.io/badge/React-61DBFB?style=for-the-badge&logo=react&logoColor=333333
 
 **Wonder Reads** is a full-stack web application that makes reading practice more engaging through stories, narration, quizzes, creative writing, and interactive games.
 
