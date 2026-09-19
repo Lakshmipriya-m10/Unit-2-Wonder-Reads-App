@@ -1,6 +1,6 @@
           
 
-<div align="center">
+<div align="center" style="padding: 20px;">
 
   <h1>📚 Wonder Reads: Interactive Reading Web Application</h1>
 
@@ -9,7 +9,6 @@
   </a>
 
 </div>
-
 
 # Wonder Reads: Full-Stack Reading & Storytelling Application
 
