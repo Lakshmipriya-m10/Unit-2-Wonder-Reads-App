@@ -295,14 +295,14 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Login
 
-| HTTP Method | Endpoint | Description | Access |
+| HTTP Method | Endpoint | Description |
 | --- | --- | --- |
 | `POST` | `/api/login` | Checks a submitted username and password and returns login details when valid. |
 | `PATCH` | `/api/login/{id}` | Updates a student's username and/or password when those fields are provided. |
 
 ### Stories
 
-| HTTP Method | Endpoint | Description | Access |
+| HTTP Method | Endpoint | Description |
 | --- | --- | --- |
 | `GET` | `/api/stories` | Retrieves all `Story` records. |
 | `GET` | `/api/stories/{id}` | Retrieves one story by ID, including its related questions. |
@@ -312,7 +312,7 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Reading Levels
 
-| HTTP Method | Endpoint | Description | Access |
+| HTTP Method | Endpoint | Description |
 | --- | --- | --- |
 | `GET` | `/api/readinglevels` | Retrieves all reading levels. |
 | `GET` | `/api/readinglevels/{id}` | Retrieves one reading level by ID. |
@@ -322,7 +322,7 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Quiz Questions
 
-| HTTP Method | Endpoint | Description | Access |
+| HTTP Method | Endpoint | Description |
 | --- | --- | --- |
 | `GET` | `/api/quiz` | Retrieves all quiz questions. |
 | `GET` | `/api/quiz/story/{storyId}` | Retrieves quiz questions associated with a story. |
