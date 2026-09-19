@@ -359,7 +359,6 @@ The repository contains both frontend and backend test files:
 For manual testing, run both applications and use a browser to test login, protected navigation, reading pages, text-to-speech controls, quizzes, story submission, own-story management, logout, and the memory game. Postman can be used to exercise the REST endpoints with JSON request bodies and the `Student-Id` header required by the admin-controlled own-story operations.
 
 No coverage percentage or broad automated feature coverage is claimed.
-
 ---
 
 ## 🔧 Debugging & Problem Solving
@@ -369,7 +368,6 @@ No coverage percentage or broad automated feature coverage is claimed.
 - **JPA relationships:** `Story`, `QuizQus`, and `QuizAns` use eager collections for the story/quiz response shape used by the quiz page. `OwnStory` and `Student` use a join column and JSON ignore behavior to avoid serializing the inverse collection.
 - **React fetch states:** Data-driven pages maintain loading, error, empty, and success states in the components where those states are needed, including story loading and quiz selection.
 - **Story input limits:** The story form limits submitted text to 800 characters, while the `OwnStory` entity stores the story column with a 700-character limit. These limits should remain aligned before longer stories are supported.
-
 ---
 
 ## 🔐 Application Architecture
@@ -403,13 +401,10 @@ The backend does not contain a separate service package in the inspected source 
 
 The following are future ideas, not completed features:
 
-- Complete the Butterfly Catch and Fruit Slice games.
 - Replace direct password comparison with password hashing and a stronger authentication/session or token strategy.
 - Add more story search, filtering, favorites, bookmarks, and reading-progress features.
-- Persist quiz scores and student learning progress.
-- Expand automated frontend and backend endpoint tests.
+- Complete the Butterfly Catch and Fruit Slice games.
 - Deploy the backend with production configuration.
-
 ---
 
 ## 👩‍💻 Developer
