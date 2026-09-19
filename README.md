@@ -141,14 +141,14 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 | Technology | Purpose |
 | --- | --- |
 | ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=333333)| Builds the application UI from reusable components. |
-| JavaScript | Implements frontend behavior, state, form handling, and API requests. |
-| Vite | Provides the frontend development server and production build scripts. |
-| React Router DOM | Handles client-side navigation and protected routes. |
-| CSS | Styles page layouts, forms, navigation, games, cards, and responsive behavior. |
-| Swiper | Provides story image carousels with navigation and pagination. |
-| Font Awesome React | Provides icons used in the interface. |
-| Vitest | Runs the frontend test file included in the repository. |
-| Cloudinary-hosted media | Supplies image and video URLs referenced directly by frontend components. |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=333333) | Implements frontend behavior, state, form handling, and API requests. |
+| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) | Provides the frontend development server and production build scripts. |
+| ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white) | Handles client-side navigation and protected routes. |
+| ![CSS](https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css3&logoColor=white) | Styles page layouts, forms, navigation, games, cards, and responsive behavior. |
+| ![React Swiper](https://img.shields.io/badge/React_Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white) | Provides story image carousels with navigation and pagination. |
+| ![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white) | Provides icons used in the interface. |
+| ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white) | Supplies image and video URLs referenced directly by frontend components. |
+| ![Text-to-Speech](https://img.shields.io/badge/Text--to--Speech-4285F4?style=for-the-badge&logo=googleassistant&logoColor=white)| Allows children to listen to stories being read aloud instead of only reading the text. |
 
 ### Back End & Database
 
