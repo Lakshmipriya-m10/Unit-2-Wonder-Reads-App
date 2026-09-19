@@ -280,7 +280,7 @@ The project uses `@OneToMany` and `@ManyToOne` relationships. No `@OneToOne` or 
 
 <!-- Add ERD image here -->
 
-`[Add ERD image or link here]`
+https://excalidraw.com/#json=c484QxfEjVmsT9Y1z93vk,_wFg9Zufj_MsHM3MnxdEIA
 
 ---
 
