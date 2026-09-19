@@ -75,18 +75,56 @@ Wonder Reads is designed for children developing reading confidence, vocabulary,
 - Login state stored using browser `sessionStorage`
 
 ### 📱 Responsive Design
-
 The frontend includes responsive CSS files and a hamburger navigation state for smaller screens. Story pages use flexible layouts and Swiper carousels; exact visual behavior depends on the browser viewport and the current CSS.
-<details open> <summary>Home & Reading Pages</summary> <img [src="preview/home-page.png"](https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Home_ugst6a.png) alt="Screenshot of Wonder Reads Home Page" height="500px" /> <img src="preview/reading-levels.png" alt="Screenshot of Reading Levels Page" height="500px" /> </details>
 
-<details> <summary>Stories & Story Details</summary> <img src="preview/stories-page.png" alt="Screenshot of Stories Page" height="500px" /> <img src="preview/story-page.png" alt="Screenshot of Story Details Page" height="500px" /> </details>
+<details open>
+<summary>Home & Reading Pages</summary>
 
-<details> <summary>Own Stories</summary> <img src="preview/own-stories.png" alt="Screenshot of Own Stories Page" height="500px" /> <img src="preview/create-story.png" alt="Screenshot of Create Your Own Story Page" height="500px" /> </details>
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Home_ugst6a.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 
-<details> <summary>Quiz & Educational Games</summary> <img src="preview/quiz-page.png" alt="Screenshot of Quiz Page" height="500px" /> <img src="preview/games-page.png" alt="Screenshot of Educational Games Page" height="500px" /> </details>
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Reading_pddaox.png" alt="Screenshot of Wonder Reads Reading Page" height="500px" />
 
-<details> <summary>About Page</summary> <img src="preview/about-page.png" alt="Screenshot of About Page" height="500px" /> </details>
----
+</details>
+
+<details>
+<summary>Educational Game</summary>
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Wonder Reads Educational Game" height="500px" />
+
+</details>
+
+<details>
+<summary>Quiz</summary>
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Quiz_f4ufjq.png" alt="Screenshot of Wonder Reads Quiz Page" height="500px" />
+
+</details>
+
+<details>
+<summary>Stories & Story Details</summary>
+
+<img src="preview/stories-page.png" alt="Screenshot of Stories Page" height="500px" />
+
+<img src="preview/story-page.png" alt="Screenshot of Story Details Page" height="500px" />
+
+</details>
+
+<details>
+<summary>Own Stories</summary>
+
+<img src="preview/own-stories.png" alt="Screenshot of Own Stories Page" height="500px" />
+
+<img src="preview/create-story.png" alt="Screenshot of Create Your Own Story Page" height="500px" />
+
+</details>
+
+<details>
+<summary>About Page</summary>
+
+<img src="preview/about-page.png" alt="Screenshot of About Page" height="500px" />
+
+</details>
+
 
 ## 📸 Key Visuals
 
