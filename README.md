@@ -295,47 +295,47 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Login
 
-| HTTP Method | Endpoint | Description |
-| --- | --- | --- |
-| `POST` | `/api/login` | Checks a submitted username and password and returns login details when valid. |
-| `PATCH` | `/api/login/{id}` | Updates a student's username and/or password when those fields are provided. |
+| HTTP Method | Endpoint | Description | Access |
+| --- | --- | --- |  --- |
+| `POST` | `/api/login` | Checks a submitted username and password and returns login details when valid. | 🛡️ Admin |
+| `PATCH` | `/api/login/{id}` | Updates a student's username and/or password when those fields are provided. | 🛡️ Admin |
 
 ### Stories
 
-| HTTP Method | Endpoint | Description |
-| --- | --- | --- |
-| `GET` | `/api/stories` | Retrieves all `Story` records. |
-| `GET` | `/api/stories/{id}` | Retrieves one story by ID, including its related questions. |
-| `POST` | `/api/stories` | Creates a story from a request body. |
-| `PUT` | `/api/stories/{id}` | Updates a story's title, grade, text, and image. |
-| `DELETE` | `/api/stories/{id}` | Deletes a story by ID. |
+| HTTP Method | Endpoint | Description | Access |
+| --- | --- | --- |  --- |
+| `GET` | `/api/stories` | Retrieves all `Story` records. | 🎓 Student |
+| `GET` | `/api/stories/{id}` | Retrieves one story by ID, including its related questions. |  🎓 Student |
+| `POST` | `/api/stories` | Creates a story from a request body. |  🎓 Student |
+| `PUT` | `/api/stories/{id}` | Updates a story's title, grade, text, and image. | 🛡️ Admin | 
+| `DELETE` | `/api/stories/{id}` | Deletes a story by ID. | 🛡️ Admin |
 
 ### Reading Levels
 
-| HTTP Method | Endpoint | Description |
-| --- | --- | --- |
-| `GET` | `/api/readinglevels` | Retrieves all reading levels. |
-| `GET` | `/api/readinglevels/{id}` | Retrieves one reading level by ID. |
-| `POST` | `/api/readinglevels` | Creates a reading level. |
-| `PUT` | `/api/readinglevels/{id}` | Updates a reading level's title, Lexile value, grade, image, and link. |
-| `DELETE` | `/api/readinglevels/{id}` | Deletes a reading level by ID. |
+| HTTP Method | Endpoint | Description | Access |
+| --- | --- | --- |  --- |
+| `GET` | `/api/readinglevels` | Retrieves all reading levels. |  🎓 Student |
+| `GET` | `/api/readinglevels/{id}` | Retrieves one reading level by ID. |  🎓 Student |
+| `POST` | `/api/readinglevels` | Creates a reading level. | 🛡️ Admin |
+| `PUT` | `/api/readinglevels/{id}` | Updates a reading level's title, Lexile value, grade, image, and link. | 🛡️ Admin |
+| `DELETE` | `/api/readinglevels/{id}` | Deletes a reading level by ID. | 🛡️ Admin |
 
 ### Quiz Questions
 
-| HTTP Method | Endpoint | Description |
-| --- | --- | --- |
-| `GET` | `/api/quiz` | Retrieves all quiz questions. |
-| `GET` | `/api/quiz/story/{storyId}` | Retrieves quiz questions associated with a story. |
-| `POST` | `/api/quiz` | Creates a quiz question. |
-| `DELETE` | `/api/quiz/{id}` | Deletes a quiz question by ID. |
+| HTTP Method | Endpoint | Description | Access |
+| --- | --- | --- | --- |
+| `GET` | `/api/quiz` | Retrieves all quiz questions. |   🎓 Student |
+| `GET` | `/api/quiz/story/{storyId}` | Retrieves quiz questions associated with a story. |   🎓 Student |
+| `POST` | `/api/quiz` | Creates a quiz question. |  🛡️ Admin |
+| `DELETE` | `/api/quiz/{id}` | Deletes a quiz question by ID. |  🛡️ Admin |
 
 ### Own Stories
 
 | HTTP Method | Endpoint | Description | Access |
 | --- | --- | --- | --- |
-| `GET` | `/api/own-stories` | Retrieves all submitted stories. | 🌎 Public |
-| `GET` | `/api/own-stories/{id}` | Retrieves one submitted story by ID. | 🌎 Public |
-| `POST` | `/api/own-stories` | Creates a submitted story and finds or creates its `Student` by email. | 🌎 Public |
+| `GET` | `/api/own-stories` | Retrieves all submitted stories. | 🎓 Student |
+| `GET` | `/api/own-stories/{id}` | Retrieves one submitted story by ID. | 🎓 Student|
+| `POST` | `/api/own-stories` | Creates a submitted story and finds or creates its `Student` by email. | 🎓 Student|
 | `PATCH` | `/api/own-stories/{id}` | Partially updates the story text when the request contains a `story` field. | 🛡️ Admin |
 | `DELETE` | `/api/own-stories/{id}` | Deletes a submitted story; the controller requires a `Student-Id` header and an `ADMIN` student role. | 🛡️ Admin |
 
