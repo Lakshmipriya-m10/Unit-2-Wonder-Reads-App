@@ -1,4 +1,6 @@
-          
+  <img src="preview/wonder-reads-home.png" alt="Wonder Reads home page" width="100%" />
+
+<img src="preview/wonder-reads-stories.png" alt="Wonder Reads stories page" width="100%" />        
 
 <div align="center" style="padding: 20px;">
 
