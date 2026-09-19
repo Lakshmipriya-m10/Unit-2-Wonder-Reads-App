@@ -154,16 +154,14 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 
 | Technology | Purpose |
 | --- | --- |
-| Java 17 | Backend programming language. |
-| Spring Boot 4.1.1 | Runs the backend application and REST API. |
-| Spring Web MVC | Provides REST controllers and HTTP endpoint handling. |
-| Spring Data JPA | Provides repository-based persistence for the entities. |
-| Hibernate | Implements the JPA ORM behavior and schema updates. |
-| MySQL Connector/J | Connects the Spring application to MySQL at runtime. |
-| MySQL | Stores students, stories, reading levels, quiz data, and submitted stories. |
+|  ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge)  | Backend programming language. |
+| ![SpringBoot](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)| Runs the backend application and REST API. |
+| ![Spring Web MVC](https://img.shields.io/badge/Spring_Web_MVC-6DB33F?style=for-the-badge&logo=spring&logoColor=white) | Provides REST controllers and HTTP endpoint handling. |
+| ![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white)| Provides repository-based persistence for the entities. |
+|  ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)  | Implements the JPA ORM behavior and schema updates. |
+|![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge) | Stores students, stories, reading levels, quiz data, and submitted stories. |
 | Spring Security | Configures the security filter chain, CORS, CSRF behavior, and request authorization. |
-| Maven Wrapper | Provides the project-local Maven startup command. |
-| JUnit / Spring Boot Test | Provides the backend context test included in `src/test`. |
+| ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) | Used for dependency management, building, testing, and managing the Spring Boot project. |
 
 ---
 
