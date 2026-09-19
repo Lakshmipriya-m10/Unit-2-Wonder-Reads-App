@@ -278,7 +278,11 @@ The project uses `@OneToMany` and `@ManyToOne` relationships. No `@OneToOne` or 
 
 ### Entity Relationship Diagram
 
-<!-- Add ERD image here -->
+<details open>
+<summary>Entity Relationship Diagram</summary>
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789797104/ERD_-updated_htodly.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
+</details>
+
 
 https://excalidraw.com/#json=4dReBezlZJU-btfpF3bdZ,ohjUULKLAwMxWvZ-UjH7_g
 ---
