@@ -82,48 +82,40 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Home_ugst6a.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Reading_pddaox.png" alt="Screenshot of Wonder Reads Reading Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776436/story-Grade1_q7fbrh.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />
 
 </details>
 
 <details>
 <summary>Educational Game</summary>
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Wonder Reads Educational Game" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Educational Games Page" height="500px" />
 
 </details>
 
 <details>
 <summary>Quiz</summary>
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Quiz_f4ufjq.png" alt="Screenshot of Wonder Reads Quiz Page" height="500px" />
-
-</details>
-
-<details>
-<summary>Stories & Story Details</summary>
-
-<img src="preview/stories-page.png" alt="Screenshot of Stories Page" height="500px" />
-
-<img src="preview/story-page.png" alt="Screenshot of Story Details Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Quiz_f4ufjq.png" alt="Screenshot of Quiz Page" height="500px" />
 
 </details>
 
 <details>
 <summary>Own Stories</summary>
 
-<img src="preview/own-stories.png" alt="Screenshot of Own Stories Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/own-stories_rih5qh.png" alt="Screenshot of Own Stories Page" height="500px" />
 
-<img src="preview/create-story.png" alt="Screenshot of Create Your Own Story Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776534/storyform_nx2gc7.png" alt="Screenshot of Create Your Own Story Form" height="500px" />
 
 </details>
 
 <details>
 <summary>About Page</summary>
 
-<img src="preview/about-page.png" alt="Screenshot of About Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/About_cbduu4.png" alt="Screenshot of About Page" height="500px" />
 
 </details>
+
 
 
 ## 📸 Key Visuals
