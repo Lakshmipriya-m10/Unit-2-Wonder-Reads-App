@@ -280,10 +280,8 @@ The project uses `@OneToMany` and `@ManyToOne` relationships. No `@OneToOne` or 
 
 <!-- Add ERD image here -->
 
-https://excalidraw.com/#json=c484QxfEjVmsT9Y1z93vk,_wFg9Zufj_MsHM3MnxdEIA
-
+https://excalidraw.com/#json=4dReBezlZJU-btfpF3bdZ,ohjUULKLAwMxWvZ-UjH7_g
 ---
-
 ## ⚙️ API Endpoints
 
 All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/example/wonderreadsapi/controller/`. The frontend currently calls these endpoints using the local backend base URL `http://localhost:8080`.
@@ -345,8 +343,6 @@ Example create-story request based on `OwnStoryDto`:
   "story": "Once upon a time..."
 }
 ```
-
----
 
 ## 🧪 Testing
 
