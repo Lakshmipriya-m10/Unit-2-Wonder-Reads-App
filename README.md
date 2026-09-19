@@ -158,9 +158,8 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 | ![SpringBoot](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)| Runs the backend application and REST API. |
 | ![Spring Web MVC](https://img.shields.io/badge/Spring_Web_MVC-6DB33F?style=for-the-badge&logo=spring&logoColor=white) | Provides REST controllers and HTTP endpoint handling. |
 | ![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white)| Provides repository-based persistence for the entities. |
-|  ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)  | Implements the JPA ORM behavior and schema updates. |
-|![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge) | Stores students, stories, reading levels, quiz data, and submitted stories. |
-| Spring Security | Configures the security filter chain, CORS, CSRF behavior, and request authorization. |
+| ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)  | Implements the JPA ORM behavior and schema updates. |
+| ![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge) | Stores students, stories, reading levels, quiz data, and submitted stories. |
 | ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white) | Used for dependency management, building, testing, and managing the Spring Boot project. |
 
 ---
