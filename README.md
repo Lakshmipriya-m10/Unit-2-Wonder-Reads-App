@@ -409,7 +409,6 @@ The backend does not contain a separate service package in the inspected source 
 The following are future ideas, not completed features:
 
 - Replace direct password comparison with password hashing and a stronger authentication/session or token strategy.
-- Add more story search, filtering, favorites, bookmarks, and reading-progress features.
 - Complete the Butterfly Catch and Fruit Slice games.
 - Deploy the backend with production configuration.
 ---
