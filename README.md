@@ -82,7 +82,7 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Home_ugst6a.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Reading_pddaox.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />() />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784816/Reading_ibulrl.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />
 
 </details>
 
