@@ -9,7 +9,7 @@
   </a>
 
 </div>
-
+<a>
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=333333)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=333333)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
@@ -29,7 +29,7 @@
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-
+</a>
 **Wonder Reads** is a full-stack web application that makes reading practice more engaging through stories, narration, quizzes, creative writing, and interactive games.
 
 **Navigation:** [About](#-about-the-project) • [Features](#-features) • [Key Visuals](#-key-visuals) • [Tech Stack](#️-tech-stack) • [Installation](#-prerequisites--installation) • [Database](#️-database-structure) • [API](#️-api-endpoints) • [Future Features](#-future-features)
