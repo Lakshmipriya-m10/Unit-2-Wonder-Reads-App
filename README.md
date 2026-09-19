@@ -82,7 +82,7 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Home_ugst6a.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776436/story-Grade1_q7fbrh.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775767/Reading_pddaox.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />() />
 
 </details>
 
@@ -90,6 +90,20 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 <summary>About Page</summary>
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/About_cbduu4.png" alt="Screenshot of About Page" height="500px" />
+
+</details>
+
+<summary>Grade 1 to Grade 5 Reading Pages</summary>
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776436/story-Grade1_q7fbrh.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_2_xgulrs.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />() />
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_3_tzqd0v.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_4_qrrqhh.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />() />
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_5_spokgm.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 
 </details>
 
@@ -101,11 +115,18 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 </details>
 
 <details>
-<summary>Own Stories</summary>
+<summary>Own Stories & Admin Page</summary>
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/own-stories_rih5qh.png" alt="Screenshot of Own Stories Page" height="500px" />
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776534/storyform_nx2gc7.png" alt="Screenshot of Create Your Own Story Form" height="500px" />
+
+</details>
+
+<details>
+<summary>Own Story Form</summary>
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776534/storyform_nx2gc7.png" alt="Screenshot of Educational Games Page" height="500px" />
 
 </details>
 
@@ -115,6 +136,21 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Educational Games Page" height="500px" />
 
 </details>
+
+<details>
+<summary>Admin Page</summary>
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Educational Games Page" height="500px" />
+
+</details>
+
+<details>
+<summary>Own Stories &Student Page</summary>
+
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784204/student-page_vhwymm.png" alt="Screenshot of Educational Games Page" height="500px" />
+
+</details>
+
 
 
 
