@@ -78,6 +78,17 @@ Wonder Reads is designed for children developing reading confidence, vocabulary,
 The frontend includes responsive CSS files and a hamburger navigation state for smaller screens. Story pages use flexible layouts and Swiper carousels; exact visual behavior depends on the browser viewport and the current CSS.
 
 <details open>
+
+## 📸 Key Visuals
+
+### Wireframes / Site Map
+
+https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wireframe?node-id=103-194&t=bdhasLxcfeWEPDSj-0
+
+### Application Screenshots
+
+#### Home Page
+
 <summary>Home & Reading Pages</summary>
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Home_ugst6a.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
@@ -119,8 +130,6 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/own-stories_rih5qh.png" alt="Screenshot of Own Stories Page" height="500px" />
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776534/storyform_nx2gc7.png" alt="Screenshot of Create Your Own Story Form" height="500px" />
-
 </details>
 
 <details>
@@ -145,29 +154,6 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 </details>
 
 
-
-
-
-
-
-
-
-
-
-
-## 📸 Key Visuals
-
-### Wireframes / Site Map
-
-https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wireframe?node-id=103-194&t=bdhasLxcfeWEPDSj-0
-
-### Application Screenshots
-
-#### Home Page
-
-<!-- Add screenshot here -->
-
-#### Reading Level / Stories
 
 <!-- Add screenshot here -->
 
