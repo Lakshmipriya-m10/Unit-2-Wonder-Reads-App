@@ -1,5 +1,16 @@
 # 📚 Wonder Reads App             
 
+<div align="center">
+
+  <h1>📚 Wonder Reads: Interactive Reading Web Application</h1>
+
+  <a href="https://github.com/Lakshmipriya-m10">
+    <img src="https://img.shields.io/badge/Created%20by-Lakshmi%20Priya-7B3F98?style=for-the-badge" alt="Created by Lakshmi Priya" />
+  </a>
+
+</div>
+
+
 [![Created by Lakshmi Priya](https://img.shields.io/badge/Created%20by-Lakshmi%20Priya-purple?style=for-the-badge)](#)
 [![Admin](https://img.shields.io/badge/ADMIN-purple?style=for-the-badge)](#)
 
