@@ -168,7 +168,7 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 ---
 ##🛠️ Development Tools:
 
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-6C5CE7?style=for-the-badge&logo=github&logoColor=white)
 
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
@@ -183,7 +183,7 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 
 - Git
 - Node.js and npm
-- JDK 17
+- JDK 16
 - MySQL Server
 - A modern browser; speech-synthesis support is required for browser narration
 
