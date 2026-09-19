@@ -140,7 +140,7 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 
 | Technology | Purpose |
 | --- | --- |
-| React 19 | Builds the application UI from reusable components. |
+| ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=333333)| Builds the application UI from reusable components. |
 | JavaScript | Implements frontend behavior, state, form handling, and API requests. |
 | Vite | Provides the frontend development server and production build scripts. |
 | React Router DOM | Handles client-side navigation and protected routes. |
