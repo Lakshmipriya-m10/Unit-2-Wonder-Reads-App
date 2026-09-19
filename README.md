@@ -87,9 +87,9 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 </details>
 
 <details>
-<summary>Educational Game</summary>
+<summary>About Page</summary>
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Educational Games Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/About_cbduu4.png" alt="Screenshot of About Page" height="500px" />
 
 </details>
 
@@ -110,11 +110,17 @@ The frontend includes responsive CSS files and a hamburger navigation state for 
 </details>
 
 <details>
-<summary>About Page</summary>
+<summary>Memory Game</summary>
 
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789776435/About_cbduu4.png" alt="Screenshot of About Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789775766/Game_mnoq9h.png" alt="Screenshot of Educational Games Page" height="500px" />
 
 </details>
+
+
+
+
+
+
 
 
 
