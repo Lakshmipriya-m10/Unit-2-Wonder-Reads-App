@@ -292,14 +292,14 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Login
 
-| Method | Endpoint | Description |
+| HTTP Method | Endpoint | Description | Access |
 | --- | --- | --- |
 | `POST` | `/api/login` | Checks a submitted username and password and returns login details when valid. |
 | `PATCH` | `/api/login/{id}` | Updates a student's username and/or password when those fields are provided. |
 
 ### Stories
 
-| Method | Endpoint | Description |
+| HTTP Method | Endpoint | Description | Access |
 | --- | --- | --- |
 | `GET` | `/api/stories` | Retrieves all `Story` records. |
 | `GET` | `/api/stories/{id}` | Retrieves one story by ID, including its related questions. |
@@ -309,7 +309,7 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Reading Levels
 
-| Method | Endpoint | Description |
+| HTTP Method | Endpoint | Description | Access |
 | --- | --- | --- |
 | `GET` | `/api/readinglevels` | Retrieves all reading levels. |
 | `GET` | `/api/readinglevels/{id}` | Retrieves one reading level by ID. |
@@ -319,7 +319,7 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Quiz Questions
 
-| Method | Endpoint | Description |
+| HTTP Method | Endpoint | Description | Access |
 | --- | --- | --- |
 | `GET` | `/api/quiz` | Retrieves all quiz questions. |
 | `GET` | `/api/quiz/story/{storyId}` | Retrieves quiz questions associated with a story. |
@@ -328,14 +328,13 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 
 ### Own Stories
 
-| Method | Endpoint | Description |
+| HTTP Method | Endpoint | Description | Access |
 | --- | --- | --- |
-| `GET` | `/api/own-stories` | Retrieves all submitted stories. |
-| `GET` | `/api/own-stories/{id}` | Retrieves one submitted story by ID. |
-| `POST` | `/api/own-stories` | Creates a submitted story and finds or creates its `Student` by email. |
-| `PUT` | `/api/own-stories/{id}` | Updates the story text; the controller requires a `Student-Id` header and an `ADMIN` student role. |
-| `PATCH` | `/api/own-stories/{id}` | Partially updates the story text when the request contains a `story` field. |
-| `DELETE` | `/api/own-stories/{id}` | Deletes a submitted story; the controller requires a `Student-Id` header and an `ADMIN` student role. |
+| `GET` | `/api/own-stories` | Retrieves all submitted stories. |  🌎 Public |
+| `GET` | `/api/own-stories/{id}` | Retrieves one submitted story by ID. |  🌎 Public |
+| `POST` | `/api/own-stories` | Creates a submitted story and finds or creates its `Student` by email. |  🌎 Public |
+| `PATCH` | `/api/own-stories/{id}` | Partially updates the story text when the request contains a `story` field. | 🛡️ Admin |
+| `DELETE` | `/api/own-stories/{id}` | Deletes a submitted story; the controller requires a `Student-Id` header and an `ADMIN` student role. | 🛡️ Admin |
 
 Example create-story request based on `OwnStoryDto`:
 
