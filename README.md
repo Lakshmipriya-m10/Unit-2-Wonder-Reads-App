@@ -1,4 +1,4 @@
-# 📚 Wonder Reads App                                                                      [![By Lakshmi Priya](https://img.shields.io/badge/By-Lakshmi%20Priyapurple?style=for-the-badge)](#)
+# 📚 Wonder Reads App                                             [![By Lakshmi Priya](https://img.shields.io/badge/By-Lakshmi%20Priyapurple?style=for-the-badge)](#)
 
 # Wonder Reads: Full-Stack Reading & Storytelling Application
 
