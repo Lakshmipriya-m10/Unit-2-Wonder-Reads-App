@@ -332,10 +332,10 @@ All controller classes are located in `Wonder-Reads-BackEnd/src/main/java/org/ex
 ### Own Stories
 
 | HTTP Method | Endpoint | Description | Access |
-| --- | --- | --- |
-| `GET` | `/api/own-stories` | Retrieves all submitted stories. |  🌎 Public |
-| `GET` | `/api/own-stories/{id}` | Retrieves one submitted story by ID. |  🌎 Public |
-| `POST` | `/api/own-stories` | Creates a submitted story and finds or creates its `Student` by email. |  🌎 Public |
+| --- | --- | --- | --- |
+| `GET` | `/api/own-stories` | Retrieves all submitted stories. | 🌎 Public |
+| `GET` | `/api/own-stories/{id}` | Retrieves one submitted story by ID. | 🌎 Public |
+| `POST` | `/api/own-stories` | Creates a submitted story and finds or creates its `Student` by email. | 🌎 Public |
 | `PATCH` | `/api/own-stories/{id}` | Partially updates the story text when the request contains a `story` field. | 🛡️ Admin |
 | `DELETE` | `/api/own-stories/{id}` | Deletes a submitted story; the controller requires a `Student-Id` header and an `ADMIN` student role. | 🛡️ Admin |
 
