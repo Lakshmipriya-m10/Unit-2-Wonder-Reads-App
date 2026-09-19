@@ -355,7 +355,6 @@ The repository contains both frontend and backend test files:
 | Area | Framework/file | What is present |
 | --- | --- | --- |
 | Frontend | Vitest, `Wonder-Reads-FrontEnd/src/App.test.jsx` | A small test that verifies a basic arithmetic expectation. |
-| Backend | JUnit 5 / Spring Boot Test, `Wonder-Reads-BackEnd/src/test/java/org/example/wonderreadsapi/WonderreadsApiApplicationTests.java` | A `contextLoads` test for starting the Spring application context. |
 
 For manual testing, run both applications and use a browser to test login, protected navigation, reading pages, text-to-speech controls, quizzes, story submission, own-story management, logout, and the memory game. Postman can be used to exercise the REST endpoints with JSON request bodies and the `Student-Id` header required by the admin-controlled own-story operations.
 
@@ -406,14 +405,10 @@ The following are future ideas, not completed features:
 
 - Complete the Butterfly Catch and Fruit Slice games.
 - Replace direct password comparison with password hashing and a stronger authentication/session or token strategy.
-- Add more granular authorization and user ownership checks for submitted stories.
-- Move API and database settings to environment-based configuration for deployment.
-- Add database migrations and seed data for easier setup.
 - Add more story search, filtering, favorites, bookmarks, and reading-progress features.
 - Persist quiz scores and student learning progress.
 - Expand automated frontend and backend endpoint tests.
-- Improve keyboard, screen-reader, and other accessibility support.
-- Deploy the frontend and backend with production configuration.
+- Deploy the backend with production configuration.
 
 ---
 
