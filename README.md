@@ -104,7 +104,7 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_2_xgulrs.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_3_tzqd0v.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 <img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_4_qrrqhh.png" alt="Screenshot of Grade 1 Reading Page" height="500px" />
-<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789784516/Grade_5_spokgm.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
+<img src="https://res.cloudinary.com/o7vbtffn/image/upload/v1789785577/Grade_5_ahlqt3.png" alt="Screenshot of Wonder Reads Home Page" height="500px" />
 </details>
 
 <details>
