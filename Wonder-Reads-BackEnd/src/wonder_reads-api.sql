@@ -89,7 +89,7 @@ CREATE TABLE `own-story` (
         REFERENCES `students`(id)
 );
 
-SET FOREIGN_KEY_CHECKS = 1;
+SET FOREIGN_KEY_CHECKS = 0;
 
 INSERT INTO `own-story`
     (story_id, story, student_id)
@@ -361,7 +361,7 @@ VALUES
      '/OwnStories',
      'Kids OwnStory');
      
-     INSERT INTO `story`
+     INSERT INTO `stories`
     (id, grade, text, image, title)
 VALUES
     (
