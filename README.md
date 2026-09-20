@@ -182,7 +182,6 @@ https://www.figma.com/design/5UibCHtWJ4fx6YLPEDUQNM/Unit-1-WonderReads--Wirefram
 
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white)
 
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 
 ## 🚀 Prerequisites & Installation
@@ -361,7 +360,8 @@ The repository contains both frontend and backend test files:
 
 | Area | Framework/file | What is present |
 | --- | --- | --- |
-| Frontend | Vitest, `Wonder-Reads-FrontEnd/src/App.test.jsx` | A small test that verifies a basic arithmetic expectation. |
+| Frontend | ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white) | A small test that verifies a basic arithmetic expectation. |
+| Backend API | ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) | Manual testing of REST API endpoints. |
 
 For manual testing, run both applications and use a browser to test login, protected navigation, reading pages, text-to-speech controls, quizzes, story submission, own-story management, logout, and the memory game. Postman can be used to exercise the REST endpoints with JSON request bodies and the `Student-Id` header required by the admin-controlled own-story operations.
 
