@@ -30,7 +30,7 @@ const Home = () => {
         }),
       });
 
-      const data = await response.json();
+       const data = response.ok ? await response.json() : { message: "Invalid username or password." };
 
       console.log(data);
 
